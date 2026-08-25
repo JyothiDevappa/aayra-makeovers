@@ -1,0 +1,266 @@
+.section {
+  background-color: var(--bg-ivory);
+  padding: 110px 0;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── HEADER ── */
+.header {
+  margin-bottom: 50px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 16px;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 1.5px;
+  background: var(--gold);
+}
+
+.headerRow {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 48px;
+  align-items: flex-end;
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.6rem, 4.2vw, 3.8rem);
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.headingGold {
+  font-style: italic;
+  color: var(--gold-dark);
+}
+
+.subheading {
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  color: var(--charcoal-soft);
+  line-height: 1.7;
+}
+
+/* ── BIG DRAMATIC 3-COLUMN GALLERY (DIOR / ALO YOGA LOOKBOOK) ── */
+.bigGalleryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.bigGalleryCard {
+  background: #FFFFFF;
+  padding: 10px;
+  border-radius: 28px;
+  border: 1px solid var(--line);
+  box-shadow: 0 16px 40px -15px rgba(26, 24, 23, 0.08);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bigGalleryCard:hover {
+  transform: translateY(-8px);
+  border-color: var(--gold);
+  box-shadow: 0 24px 50px -10px rgba(184, 147, 78, 0.18);
+}
+
+.cardCenter {
+  transform: translateY(-12px);
+}
+
+.cardCenter:hover {
+  transform: translateY(-18px);
+}
+
+.imageFrame {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--bg-ivory-warm);
+}
+
+.bigImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: contrast(1.03) brightness(1.01) saturate(1.05);
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
+}
+
+.bigGalleryCard:hover .bigImg {
+  transform: scale(1.05);
+  filter: contrast(1.05) brightness(1.02) saturate(1.08);
+}
+
+/* ── BOTTOM ACTIONS & PILLS ── */
+.bottomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  padding-top: 32px;
+  border-top: 1px solid var(--line);
+}
+
+.featurePills {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.featurePill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+.pillDot {
+  color: var(--gold-dark);
+  font-size: 0.8rem;
+}
+
+.actionGroup {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.btnLuxe {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 34px;
+  background-color: var(--charcoal);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 16px rgba(26, 24, 23, 0.1);
+  text-decoration: none;
+}
+
+.btnLuxe svg {
+  transition: transform 0.3s ease;
+}
+
+.btnLuxe:hover {
+  background-color: var(--gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(184, 147, 78, 0.28);
+}
+
+.btnLuxe:hover svg {
+  transform: translateX(4px);
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  border: 1px solid var(--line-strong);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+.btnGhost:hover {
+  border-color: var(--charcoal);
+  background-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1080px) {
+  .headerRow {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .bigGalleryGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  .imageFrame {
+    height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 0;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .bigGalleryGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .cardCenter {
+    transform: none;
+  }
+  .imageFrame {
+    height: 340px;
+  }
+  .bottomRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .featurePills {
+    justify-content: center;
+  }
+  .actionGroup {
+    flex-direction: column;
+    width: 100%;
+  }
+  .btnLuxe, .btnGhost {
+    width: 100%;
+    justify-content: center;
+  }
+}

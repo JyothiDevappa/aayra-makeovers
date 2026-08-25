@@ -1,0 +1,480 @@
+.section {
+  background-color: var(--bg-ivory);
+  padding: 100px 0 110px;
+  position: relative;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── HEADER ── */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 32px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.headerLeft {
+  max-width: 650px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 14px;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 1.5px;
+  background: var(--gold);
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 4.2vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--charcoal);
+  margin-bottom: 14px;
+}
+
+.headingGold {
+  font-style: italic;
+  color: var(--gold-dark);
+}
+
+.subheading {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--charcoal-soft);
+  line-height: 1.6;
+}
+
+/* ── 2 TABS SEGMENTED CONTROL ── */
+.filterGroup {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #FFFFFF;
+  padding: 6px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.filterBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 26px;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--charcoal-soft);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+  user-select: none;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.tabIcon {
+  font-size: 0.9rem;
+}
+
+.filterBtn:hover {
+  color: var(--charcoal);
+}
+
+.filterBtnActive {
+  background-color: var(--charcoal);
+  color: #FFFFFF;
+  box-shadow: 0 4px 14px rgba(26, 24, 23, 0.15);
+}
+
+.filterBtnActive:hover {
+  color: #FFFFFF;
+}
+
+/* ── STACKED CARDS (Maison Auré style) ── */
+.cardsStack {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 280px 1fr auto;
+  align-items: stretch;
+  background-color: #FFFFFF;
+  border-radius: 24px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-luxe);
+  transform: translateY(-3px);
+  border-color: var(--line-strong);
+}
+
+.card:active {
+  transform: scale(0.995);
+}
+
+/* Left: Image */
+.cardImgWrap {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  background-color: var(--bg-ivory-warm);
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.card:hover .cardImg {
+  transform: scale(1.06);
+}
+
+.imgTag {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  padding: 4px 12px;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+/* Middle: Details */
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 26px 34px;
+}
+
+.cardEyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 6px;
+}
+
+.cardTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1.15;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.card:hover .cardTitle {
+  color: var(--gold-dark);
+}
+
+.cardDesc {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--charcoal-soft);
+  line-height: 1.6;
+  max-width: 580px;
+  margin-bottom: 14px;
+}
+
+.pillList {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pillItem {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 12px;
+  background-color: var(--bg-ivory);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--charcoal-soft);
+}
+
+/* Right: Action & Price */
+.cardAction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 26px 36px;
+  border-left: 1px solid var(--line);
+  gap: 18px;
+  min-width: 190px;
+}
+
+.priceWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.priceLabel {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--charcoal-muted);
+}
+
+.priceVal {
+  font-family: var(--font-serif);
+  font-size: 1.55rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1.1;
+}
+
+.arrowBtn {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1px solid var(--charcoal);
+  display: grid;
+  place-items: center;
+  color: var(--charcoal);
+  background-color: transparent;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.arrowSvg {
+  transition: transform 0.3s ease;
+}
+
+.card:hover .arrowBtn {
+  background-color: var(--charcoal);
+  color: #FFFFFF;
+  transform: scale(1.08);
+}
+
+.card:hover .arrowSvg {
+  transform: translate(2px, -2px);
+}
+
+/* ── BOTTOM BANNER ── */
+.bottomBanner {
+  margin-top: 56px;
+  background-color: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 34px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  box-shadow: var(--shadow-card);
+  flex-wrap: wrap;
+}
+
+.bottomTitle {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 6px;
+}
+
+.bottomSub {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--charcoal-soft);
+}
+
+.bottomBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 32px;
+  background-color: var(--gold-dark);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 16px rgba(184, 147, 78, 0.25);
+  white-space: nowrap;
+}
+
+.bottomBtn:hover {
+  background-color: var(--charcoal);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(26, 24, 23, 0.15);
+}
+
+/* ── RESPONSIVE STYLES ── */
+@media (max-width: 1080px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .card {
+    grid-template-columns: 240px 1fr auto;
+  }
+
+  .cardContent {
+    padding: 22px 24px;
+  }
+
+  .cardAction {
+    padding: 22px 24px;
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 860px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 36px;
+  }
+
+  .filterGroup {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px;
+    padding: 4px;
+  }
+
+  .filterBtn {
+    padding: 12px 10px;
+    font-size: 0.72rem;
+    width: 100%;
+  }
+
+  .card {
+    grid-template-columns: 1fr;
+    border-radius: 20px;
+  }
+
+  .cardImgWrap {
+    height: 200px;
+  }
+
+  .cardContent {
+    padding: 20px 18px 14px;
+  }
+
+  .cardAction {
+    border-left: none;
+    border-top: 1px solid var(--line);
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    min-width: 0;
+  }
+
+  .priceWrap {
+    align-items: flex-start;
+  }
+
+  .priceVal {
+    font-size: 1.35rem;
+  }
+
+  .arrowBtn {
+    width: 42px;
+    height: 42px;
+  }
+
+  .bottomBanner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 24px 20px;
+    border-radius: 20px;
+  }
+
+  .bottomBtn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: 60px 0 70px;
+  }
+
+  .container {
+    padding: 0 16px;
+  }
+
+  .cardImgWrap {
+    height: 185px;
+  }
+
+  .cardTitle {
+    font-size: 1.3rem;
+  }
+
+  .cardDesc {
+    font-size: 0.84rem;
+  }
+
+  .filterBtn {
+    padding: 10px 6px;
+    font-size: 0.68rem;
+    gap: 6px;
+  }
+}

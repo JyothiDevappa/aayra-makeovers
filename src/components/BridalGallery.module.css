@@ -1,0 +1,427 @@
+.section {
+  background-color: var(--bg-ivory);
+  padding: 110px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── HERO ROW ── */
+.heroRow {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 70px;
+  align-items: flex-start;
+  margin-bottom: 100px;
+}
+
+.mainImgWrap {
+  position: sticky;
+  top: 100px;
+}
+
+.imgBox {
+  position: relative;
+  border-radius: 32px;
+  overflow: hidden;
+  box-shadow: var(--shadow-luxe);
+  background-color: var(--bg-ivory-warm);
+  aspect-ratio: 4 / 5.2;
+}
+
+.mainImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.mainBadge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.textSide {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 16px;
+}
+
+.eyebrowLine {
+  width: 32px;
+  height: 1.5px;
+  background: var(--gold);
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.4rem, 3.8vw, 3.6rem);
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  margin-bottom: 18px;
+}
+
+.headingGold {
+  font-style: italic;
+  color: var(--gold-dark);
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--charcoal-soft);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+/* ── TRAVEL TO VENUE CARD ── */
+.travelCard {
+  background: #FFFFFF;
+  border: 1.5px solid var(--gold-dark);
+  border-radius: 20px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 28px;
+  box-shadow: 0 4px 18px rgba(184, 147, 78, 0.1);
+}
+
+.travelIcon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gold-subtle);
+  color: var(--gold-dark);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.travelText strong {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.travelText p {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--charcoal-soft);
+  line-height: 1.5;
+}
+
+/* ── SERVICES LIST GRID ── */
+.serviceSectionTitle {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 16px;
+}
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.serviceCardItem {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+}
+
+.serviceCardItem:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(184, 147, 78, 0.12);
+}
+
+.serviceBullet {
+  color: var(--gold-dark);
+  font-size: 0.75rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.serviceDetails {
+  display: flex;
+  flex-direction: column;
+}
+
+.serviceName {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.25;
+}
+
+.serviceDesc {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  color: var(--charcoal-soft);
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+/* ── ACTION BUTTONS ── */
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btnLuxe {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 34px;
+  background-color: var(--charcoal);
+  color: #FFFFFF;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: all 0.35s ease;
+  box-shadow: 0 4px 16px rgba(26, 24, 23, 0.1);
+  text-decoration: none;
+}
+
+.btnLuxe svg {
+  transition: transform 0.3s ease;
+}
+
+.btnLuxe:hover {
+  background-color: var(--gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(184, 147, 78, 0.28);
+}
+
+.btnLuxe:hover svg {
+  transform: translateX(4px);
+}
+
+.btnGhost {
+  display: inline-flex;
+  align-items: center;
+  padding: 14px 28px;
+  border: 1px solid var(--line-strong);
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+.btnGhost:hover {
+  border-color: var(--charcoal);
+  background-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+/* ── COLLECTION SECTION ── */
+.collectionWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.collectionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 36px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.collectionTitle {
+  font-family: var(--font-serif);
+  font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.1;
+}
+
+.viewAll {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--charcoal);
+  padding: 8px 0;
+  border-bottom: 1.5px solid var(--gold);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.viewAll svg {
+  transition: transform 0.25s ease;
+}
+
+.viewAll:hover {
+  color: var(--gold-dark);
+}
+
+.viewAll:hover svg {
+  transform: translateX(4px);
+}
+
+.collectionGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.collectionItem {
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  transition: all 0.4s ease;
+}
+
+.collectionItem:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-luxe);
+  border-color: var(--line-strong);
+}
+
+.collectionImgWrap {
+  position: relative;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+}
+
+.collectionImgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.collectionItem:hover .collectionImgWrap img {
+  transform: scale(1.06);
+}
+
+.collectionOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26, 24, 23, 0.75) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.itemTag {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+  margin-bottom: 4px;
+}
+
+.itemTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.15;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1080px) {
+  .heroRow {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    margin-bottom: 70px;
+  }
+  .mainImgWrap {
+    position: static;
+  }
+  .collectionGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 70px 0;
+  }
+  .container {
+    padding: 0 24px;
+  }
+  .servicesGrid {
+    grid-template-columns: 1fr;
+  }
+  .actionRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btnLuxe, .btnGhost {
+    width: 100%;
+    justify-content: center;
+  }
+  .collectionGrid {
+    grid-template-columns: 1fr;
+  }
+}

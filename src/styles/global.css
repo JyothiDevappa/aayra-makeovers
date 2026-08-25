@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600;1,700&family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-page:       #FFFFFF;
+  --bg-ivory:      #FAF8F5;
+  --bg-ivory-warm: #F5F1E9;
+  --bg-ivory-deep: #EDE7DC;
+  --bg-card:       #FFFFFF;
+  
+  --charcoal:       #1A1817;
+  --charcoal-soft:  #6E6862;
+  --charcoal-muted: #9E968D;
+  --charcoal-dark:  #11100F;
+  
+  --gold:           #C9A96A;
+  --gold-dark:      #B8934E;
+  --gold-light:     #DFBE7A;
+  --gold-subtle:    rgba(201, 169, 106, 0.12);
+  --gold-glow:      rgba(201, 169, 106, 0.35);
+
+  --line:           #ECE7DF;
+  --line-strong:    #DDD7CD;
+  --line-light:     #F3EFE8;
+
+  --font-serif:     'Cormorant Garamond', Georgia, serif;
+  --font-sans:      'Inter', 'DM Sans', system-ui, -apple-system, sans-serif;
+
+  --radius-sm:      10px;
+  --radius-md:      18px;
+  --radius-lg:      24px;
+  --radius-xl:      32px;
+  --radius-pill:    9999px;
+
+  --shadow-card:    0 8px 30px rgba(26, 24, 23, 0.04), 0 1px 3px rgba(26, 24, 23, 0.02);
+  --shadow-luxe:    0 20px 48px rgba(26, 24, 23, 0.08), 0 4px 12px rgba(26, 24, 23, 0.03);
+  --shadow-float:   0 14px 36px rgba(26, 24, 23, 0.12);
+
+  --transition:     all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-ivory);
+  color: var(--charcoal);
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+.container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* Common luxury helper classes */
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.text-gold {
+  color: var(--gold);
+}
+
+.italic {
+  font-style: italic;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-ivory);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--line-strong);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+}
