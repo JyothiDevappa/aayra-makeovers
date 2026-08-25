@@ -392,8 +392,9 @@
 
 @media (max-width: 480px) {
   .sidebar {
-    width: 100%;
-    right: -100%;
+    width: 82vw;
+    max-width: 320px;
+    right: -85vw;
   }
   .sidebarOpen {
     right: 0;

@@ -28,9 +28,9 @@
 
 .title {
   font-family: var(--font-serif);
-  font-size: clamp(3rem, 5vw, 4.6rem);
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
   font-weight: 400;
-  line-height: 1.02;
+  line-height: 1.05;
   color: var(--charcoal);
   margin-bottom: 16px;
   letter-spacing: -0.02em;
@@ -51,10 +51,11 @@
   padding: 60px 48px 120px;
 }
 
+/* ── BRIDAL GALLERY GRID ── */
 .galleryGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 28px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
 }
 
 .galleryCard {
@@ -62,7 +63,6 @@
   overflow: hidden;
   box-shadow: var(--shadow-card);
   border: 1px solid var(--line);
-  height: 440px;
   background-color: #FFFFFF;
   transition: all 0.4s ease;
 }
@@ -73,15 +73,47 @@
   border-color: var(--line-strong);
 }
 
-.galleryCard img {
+.galleryImgWrap {
+  position: relative;
+  aspect-ratio: 3 / 4.2;
+  overflow: hidden;
+}
+
+.galleryImgWrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
-.galleryCard:hover img {
+.galleryCard:hover .galleryImgWrap img {
   transform: scale(1.05);
+}
+
+.galleryOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(26, 24, 23, 0.85) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.galleryCardTitle {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #FFFFFF;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.galleryCardDesc {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  color: var(--charcoal-muted);
+  line-height: 1.35;
 }
 
 /* ── BOUTIQUE & TAILORING SECTION ── */
@@ -110,8 +142,8 @@
 .hairGrid,
 .tailorGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 28px;
 }
 
 .hairCard,
@@ -128,7 +160,7 @@
 
 .hairCard:hover,
 .tailorCard:hover {
-  transform: translateY(-6px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-luxe);
   border-color: var(--gold);
 }
@@ -136,8 +168,9 @@
 .tailorImgWrap {
   position: relative;
   width: 100%;
-  height: 290px;
+  height: 270px;
   overflow: hidden;
+  background-color: var(--bg-ivory-warm);
 }
 
 .hairCard img,
@@ -155,9 +188,9 @@
 
 .cardTag {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  padding: 6px 14px;
+  top: 14px;
+  right: 14px;
+  padding: 5px 12px;
   background: rgba(255, 255, 255, 0.94);
   backdrop-filter: blur(8px);
   border: 1px solid var(--line);
@@ -172,7 +205,7 @@
 }
 
 .hairInfo {
-  padding: 26px 28px;
+  padding: 24px 26px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -180,7 +213,7 @@
 
 .hairInfo h3 {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: var(--charcoal);
   margin-bottom: 8px;
@@ -189,7 +222,7 @@
 
 .hairInfo p {
   font-family: var(--font-sans);
-  font-size: 0.86rem;
+  font-size: 0.85rem;
   color: var(--charcoal-soft);
   line-height: 1.6;
 }
@@ -219,7 +252,7 @@
   background: #FFFFFF;
   border: 1px solid var(--line);
   border-radius: 18px;
-  padding: 20px 22px;
+  padding: 18px 20px;
   display: flex;
   align-items: flex-start;
   gap: 12px;
@@ -242,7 +275,7 @@
 
 .patternName {
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   font-weight: 700;
   color: var(--charcoal);
   margin-bottom: 4px;
@@ -250,9 +283,211 @@
 
 .patternDesc {
   font-family: var(--font-sans);
+  font-size: 0.76rem;
+  color: var(--charcoal-soft);
+  line-height: 1.45;
+}
+
+/* ── ABOUT PAGE SPECIFIC STYLING ── */
+.aboutStoryGrid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-bottom: 90px;
+}
+
+.storyTag {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.storyHeading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 3.6vw, 3.4rem);
+  font-weight: 400;
+  color: var(--charcoal);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 20px;
+}
+
+.storyGold {
+  font-style: italic;
+  color: var(--gold-dark);
+}
+
+.storyP {
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  color: var(--charcoal-soft);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.statsRow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 28px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.statBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.statNum {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--charcoal-soft);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.storyPillarsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pillarCard {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 18px 22px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
+}
+
+.pillarCard:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(184, 147, 78, 0.1);
+}
+
+.pillarIcon {
+  font-size: 1.3rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pillarTitle {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+
+.pillarDesc {
+  font-family: var(--font-sans);
   font-size: 0.78rem;
   color: var(--charcoal-soft);
   line-height: 1.45;
+}
+
+/* ── 3-IMAGE STUDIO LOOKBOOK ── */
+.studioLookbookSection {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+.lookbookGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 36px;
+}
+
+.lookbookCard {
+  background: #FFFFFF;
+  border-radius: 26px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-card);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.lookbookCard:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-luxe);
+  border-color: var(--gold);
+}
+
+.lookbookImgWrap {
+  position: relative;
+  height: 380px;
+  overflow: hidden;
+  background-color: var(--bg-ivory-warm);
+}
+
+.lookbookImgWrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.lookbookCard:hover .lookbookImgWrap img {
+  transform: scale(1.05);
+}
+
+.lookbookInfo {
+  padding: 24px 26px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.lookbookNum {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 6px;
+}
+
+.lookbookTitle {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.lookbookDesc {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  color: var(--charcoal-soft);
+  line-height: 1.55;
 }
 
 /* ── CTA BANNER ── */
@@ -318,35 +553,164 @@
   transform: translateX(4px);
 }
 
-/* ── RESPONSIVE ── */
+/* ── RESPONSIVE STYLES (MOBILE 2-IN-A-ROW) ── */
 @media (max-width: 1080px) {
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .aboutStoryGrid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
   .patternsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .lookbookGrid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (max-width: 768px) {
   .pageHeader {
-    padding: 60px 24px 40px;
+    padding: 60px 20px 40px;
   }
   .galleryContainer {
-    padding: 40px 24px 80px;
+    padding: 36px 16px 80px;
   }
+
+  /* 2 IN A ROW ON MOBILE */
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .galleryImgWrap {
+    aspect-ratio: 3 / 4;
+  }
+  .galleryOverlay {
+    padding: 12px;
+  }
+  .galleryCardTitle {
+    font-size: 0.95rem;
+  }
+  .galleryCardDesc {
+    font-size: 0.65rem;
+    line-height: 1.25;
+  }
+
   .hairGrid,
   .tailorGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
+  .tailorImgWrap {
+    height: 160px;
+  }
+  .hairInfo {
+    padding: 14px 12px;
+  }
+  .hairInfo h3 {
+    font-size: 1.05rem;
+    margin-bottom: 4px;
+  }
+  .hairInfo p {
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+  .cardTag {
+    top: 8px;
+    right: 8px;
+    padding: 4px 8px;
+    font-size: 0.58rem;
+  }
+
   .patternsGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
   }
+  .patternCard {
+    padding: 12px 10px;
+    gap: 8px;
+    border-radius: 14px;
+  }
+  .patternName {
+    font-size: 0.78rem;
+  }
+  .patternDesc {
+    font-size: 0.68rem;
+  }
+
+  .lookbookGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .lookbookImgWrap {
+    height: 200px;
+  }
+  .lookbookInfo {
+    padding: 14px 12px;
+  }
+  .lookbookTitle {
+    font-size: 1.05rem;
+  }
+  .lookbookDesc {
+    font-size: 0.72rem;
+  }
+
+  .statsRow {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+  .statNum {
+    font-size: 1.7rem;
+  }
+  .statLabel {
+    font-size: 0.62rem;
+  }
+
+  .storyPillarsCol {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .pillarCard {
+    padding: 12px 10px;
+    gap: 10px;
+    border-radius: 14px;
+  }
+  .pillarTitle {
+    font-size: 0.8rem;
+  }
+  .pillarDesc {
+    font-size: 0.68rem;
+  }
+
   .ctaBanner {
     flex-direction: column;
     align-items: stretch;
-    padding: 32px 24px;
+    padding: 28px 20px;
     text-align: left;
+    border-radius: 20px;
   }
   .ctaBtn {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageWrap {
+    padding-top: 80px;
+  }
+  .title {
+    font-size: 2.2rem;
+  }
+  .sub {
+    font-size: 0.88rem;
+  }
+  .tailorImgWrap {
+    height: 145px;
+  }
+  .lookbookImgWrap {
+    height: 175px;
   }
 }

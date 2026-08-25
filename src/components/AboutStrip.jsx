@@ -1,111 +1,131 @@
 import { motion } from 'framer-motion'
 import styles from './AboutStrip.module.css'
-
-import shop1 from '../assets/img/shop/shop_img_1.jpeg'
-import shop2 from '../assets/img/shop/shop_img_2.jpeg'
-import shop3 from '../assets/img/shop/shop_img_3.jpeg'
+import shopImg from '../assets/img/shop/shop_img_1.jpeg'
 
 const WA = 'https://wa.me/919686457628?text=Hello%20Pallavi%2C%20I%20would%20like%20to%20visit%20Aayra%20Makeovers%20Studio.'
-
-const studioGallery = [
-  { img: shop1, alt: 'Aayra Makeovers Studio Area' },
-  { img: shop2, alt: 'Aayra Makeovers Styling Station' },
-  { img: shop3, alt: 'Aayra Makeovers Boutique Studio' },
-]
+const MAPS_URL = 'https://maps.google.com/?q=Aayra+Makeovers+Beauty+Parlour+and+Tailoring+Chamarajanagar'
 
 export default function AboutStrip() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="visit-shop">
       <div className={styles.container}>
         
-        {/* Header — Clean Editorial Typography */}
-        <div className={styles.header}>
+        <div className={styles.visitWrapper}>
+          
+          {/* Left Column: Premium Studio Showcase Image */}
           <motion.div
-            className={styles.eyebrow}
-            initial={{ opacity: 0, y: 14 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            className={styles.imageCol}
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.6 }}
           >
-            <span className={styles.eyebrowLine} />
-            Inside Aayra Studio
+            <div className={styles.imageCard}>
+              <img
+                src={shopImg}
+                alt="Visit Aayra Makeovers Studio & Boutique"
+                className={styles.studioImg}
+                loading="lazy"
+              />
+              <div className={styles.imgOverlay} />
+              
+              {/* Floating Badges */}
+              <div className={styles.topBadge}>
+                <span className={styles.badgeDot}>●</span>
+                <span>Open Daily · 9:30 AM – 8:30 PM</span>
+              </div>
+              
+              <div className={styles.bottomCard}>
+                <p className={styles.bottomTag}>CHAMARAJANAGAR</p>
+                <p className={styles.bottomTitle}>Aayra Beauty &amp; Boutique Studio</p>
+                <p className={styles.bottomSub}>Private 1-on-1 Sanctuary for Ladies &amp; Kids</p>
+              </div>
+            </div>
           </motion.div>
 
-          <div className={styles.headerRow}>
-            <motion.h2
-              className={styles.heading}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-            >
-              A Private Sanctuary for <span className={styles.headingGold}>Beauty &amp; Style.</span>
-            </motion.h2>
+          {/* Right Column: Editorial Invitation & Details */}
+          <motion.div
+            className={styles.contentCol}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.15 }}
+          >
+            <div className={styles.eyebrow}>
+              <span className={styles.eyebrowLine} />
+              Boutique &amp; Studio Invitation
+            </div>
 
-            <motion.p
-              className={styles.subheading}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              Exclusively dedicated to ladies and kids in Chamarajanagar. Relax in a clean, welcoming ambiance with personalized 1-on-1 attention for all beauty and tailoring rituals.
-            </motion.p>
-          </div>
-        </div>
+            <h2 className={styles.heading}>
+              Visit Our <span className={styles.headingGold}>Shop.</span>
+            </h2>
 
-        {/* Big, Dramatic High-Fashion Gallery Columns (Zero text/cards inside) */}
-        <div className={styles.bigGalleryGrid}>
-          {studioGallery.map((item, idx) => (
-            <motion.div
-              key={idx}
-              className={`${styles.bigGalleryCard} ${idx === 1 ? styles.cardCenter : ''}`}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.7, delay: idx * 0.12 }}
-            >
-              <div className={styles.imageFrame}>
-                <img
-                  src={item.img}
-                  alt={item.alt}
-                  className={styles.bigImg}
-                  loading="lazy"
-                />
+            <p className={styles.description}>
+              Step into a warm, hygienic, and completely private environment curated exclusively for women and children. From specialized bridal trials and hair styling to bespoke blouse stitching, we provide dedicated personalized care for your complete beauty transformation.
+            </p>
+
+            <div className={styles.highlightsGrid}>
+              <div className={styles.highlightItem}>
+                <div className={styles.iconBox}>✨</div>
+                <div>
+                  <h4 className={styles.highlightTitle}>1-on-1 Personal Attention</h4>
+                  <p className={styles.highlightDesc}>Undivided time &amp; tailored beauty consultations by Pallavi.</p>
+                </div>
               </div>
-            </motion.div>
-          ))}
-        </div>
 
-        {/* Bottom Editorial Features & Direct Actions */}
-        <div className={styles.bottomRow}>
-          <div className={styles.featurePills}>
-            <div className={styles.featurePill}>
-              <span className={styles.pillDot}>✦</span>
-              <span>1-on-1 Personal Care</span>
-            </div>
-            <div className={styles.featurePill}>
-              <span className={styles.pillDot}>✦</span>
-              <span>Ladies &amp; Kids Only</span>
-            </div>
-            <div className={styles.featurePill}>
-              <span className={styles.pillDot}>✦</span>
-              <span>7+ Years Experience</span>
-            </div>
-          </div>
+              <div className={styles.highlightItem}>
+                <div className={styles.iconBox}>👗</div>
+                <div>
+                  <h4 className={styles.highlightTitle}>Custom Tailoring &amp; Aari</h4>
+                  <p className={styles.highlightDesc}>Trial fittings, bridal blouse stitching, and custom neck embroidery.</p>
+                </div>
+              </div>
 
-          <div className={styles.actionGroup}>
-            <a href={WA} target="_blank" rel="noreferrer" className={styles.btnLuxe}>
-              <span>Book Studio Visit</span>
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </a>
-            <a href="tel:+919686457628" className={styles.btnGhost}>
-              <span>Call +91 96864 57628</span>
-            </a>
-          </div>
+              <div className={styles.highlightItem}>
+                <div className={styles.iconBox}>🌿</div>
+                <div>
+                  <h4 className={styles.highlightTitle}>Safe &amp; Clean Ambiance</h4>
+                  <p className={styles.highlightDesc}>100% sanitized tools, top cosmetics, and private space.</p>
+                </div>
+              </div>
+
+              <div className={styles.highlightItem}>
+                <div className={styles.iconBox}>📍</div>
+                <div>
+                  <h4 className={styles.highlightTitle}>Easy to Reach Location</h4>
+                  <p className={styles.highlightDesc}>Centrally located in Chamarajanagar with easy parking &amp; access.</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Action Buttons */}
+            <div className={styles.actions}>
+              <a href={WA} target="_blank" rel="noreferrer" className={styles.btnPrimary}>
+                <span>Book Studio Visit</span>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
+              
+              <a href={MAPS_URL} target="_blank" rel="noreferrer" className={styles.btnSecondary}>
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                  <circle cx="12" cy="10" r="3" />
+                </svg>
+                <span>Get Directions</span>
+              </a>
+
+              <a href="tel:+919686457628" className={styles.btnPhone}>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                <span>Call Us</span>
+              </a>
+            </div>
+
+          </motion.div>
+
         </div>
 
       </div>

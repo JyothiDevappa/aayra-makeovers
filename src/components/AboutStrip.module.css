@@ -1,6 +1,6 @@
 .section {
   background-color: var(--bg-ivory);
-  padding: 110px 0;
+  padding: 100px 0 110px;
   border-bottom: 1px solid var(--line);
   position: relative;
   overflow: hidden;
@@ -12,9 +12,115 @@
   padding: 0 48px;
 }
 
-/* ── HEADER ── */
-.header {
-  margin-bottom: 50px;
+/* ── VISIT WRAPPER: 2 COLUMNS ── */
+.visitWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ── LEFT: IMAGE CARD ── */
+.imageCol {
+  position: relative;
+}
+
+.imageCard {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-luxe);
+  background-color: var(--bg-ivory-warm);
+  border: 1px solid var(--line);
+  aspect-ratio: 4 / 4.8;
+}
+
+.studioImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.imageCard:hover .studioImg {
+  transform: scale(1.04);
+}
+
+.imgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(26, 24, 23, 0.15) 0%, rgba(26, 24, 23, 0.65) 100%);
+  pointer-events: none;
+}
+
+.topBadge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 8px 16px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line);
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--charcoal);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+}
+
+.badgeDot {
+  color: #10B981;
+  font-size: 0.65rem;
+}
+
+.bottomCard {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(14px);
+  border-radius: 20px;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.bottomTag {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 2px;
+}
+
+.bottomTitle {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--charcoal);
+  line-height: 1.2;
+}
+
+.bottomSub {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  color: var(--charcoal-soft);
+  margin-top: 2px;
+}
+
+/* ── RIGHT: CONTENT ── */
+.contentCol {
+  display: flex;
+  flex-direction: column;
 }
 
 .eyebrow {
@@ -27,7 +133,7 @@
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--gold-dark);
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .eyebrowLine {
@@ -36,20 +142,14 @@
   background: var(--gold);
 }
 
-.headerRow {
-  display: grid;
-  grid-template-columns: 1.2fr 0.9fr;
-  gap: 48px;
-  align-items: flex-end;
-}
-
 .heading {
   font-family: var(--font-serif);
-  font-size: clamp(2.6rem, 4.2vw, 3.8rem);
+  font-size: clamp(2.4rem, 4vw, 3.8rem);
   font-weight: 400;
   color: var(--charcoal);
   line-height: 1.05;
   letter-spacing: -0.02em;
+  margin-bottom: 16px;
 }
 
 .headingGold {
@@ -57,151 +157,114 @@
   color: var(--gold-dark);
 }
 
-.subheading {
+.description {
   font-family: var(--font-sans);
   font-size: 0.96rem;
   color: var(--charcoal-soft);
   line-height: 1.7;
+  margin-bottom: 30px;
 }
 
-/* ── BIG DRAMATIC 3-COLUMN GALLERY (DIOR / ALO YOGA LOOKBOOK) ── */
-.bigGalleryGrid {
+/* ── HIGHLIGHTS GRID ── */
+.highlightsGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-  margin-bottom: 48px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 36px;
 }
 
-.bigGalleryCard {
+.highlightItem {
   background: #FFFFFF;
-  padding: 10px;
-  border-radius: 28px;
   border: 1px solid var(--line);
-  box-shadow: 0 16px 40px -15px rgba(26, 24, 23, 0.08);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.bigGalleryCard:hover {
-  transform: translateY(-8px);
-  border-color: var(--gold);
-  box-shadow: 0 24px 50px -10px rgba(184, 147, 78, 0.18);
-}
-
-.cardCenter {
-  transform: translateY(-12px);
-}
-
-.cardCenter:hover {
-  transform: translateY(-18px);
-}
-
-.imageFrame {
-  position: relative;
-  width: 100%;
-  height: 520px;
-  border-radius: 20px;
-  overflow: hidden;
-  background-color: var(--bg-ivory-warm);
-}
-
-.bigImg {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-  filter: contrast(1.03) brightness(1.01) saturate(1.05);
-  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), filter 0.6s ease;
-}
-
-.bigGalleryCard:hover .bigImg {
-  transform: scale(1.05);
-  filter: contrast(1.05) brightness(1.02) saturate(1.08);
-}
-
-/* ── BOTTOM ACTIONS & PILLS ── */
-.bottomRow {
+  border-radius: 18px;
+  padding: 16px 18px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  flex-wrap: wrap;
-  padding-top: 32px;
-  border-top: 1px solid var(--line);
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: all 0.25s ease;
 }
 
-.featurePills {
+.highlightItem:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(184, 147, 78, 0.1);
+}
+
+.iconBox {
+  font-size: 1.15rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.highlightTitle {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--charcoal);
+  line-height: 1.25;
+  margin-bottom: 3px;
+}
+
+.highlightDesc {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  color: var(--charcoal-soft);
+  line-height: 1.4;
+}
+
+/* ── ACTION BUTTONS ── */
+.actions {
   display: flex;
   align-items: center;
   gap: 12px;
   flex-wrap: wrap;
 }
 
-.featurePill {
+.btnPrimary {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
-  background: #FFFFFF;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-pill);
-  font-family: var(--font-sans);
-  font-size: 0.76rem;
-  font-weight: 600;
-  color: var(--charcoal);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
-}
-
-.pillDot {
-  color: var(--gold-dark);
-  font-size: 0.8rem;
-}
-
-.actionGroup {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.btnLuxe {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 15px 34px;
+  padding: 14px 28px;
   background-color: var(--charcoal);
   color: #FFFFFF;
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   border-radius: var(--radius-pill);
   transition: all 0.35s ease;
-  box-shadow: 0 4px 16px rgba(26, 24, 23, 0.1);
+  box-shadow: 0 4px 16px rgba(26, 24, 23, 0.12);
   text-decoration: none;
 }
 
-.btnLuxe svg {
+.btnPrimary svg {
   transition: transform 0.3s ease;
 }
 
-.btnLuxe:hover {
+.btnPrimary:hover {
   background-color: var(--gold-dark);
+  color: #FFFFFF;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(184, 147, 78, 0.28);
 }
 
-.btnLuxe:hover svg {
+.btnPrimary:hover svg {
   transform: translateX(4px);
 }
 
-.btnGhost {
+.btnSecondary {
   display: inline-flex;
   align-items: center;
-  padding: 14px 28px;
+  gap: 8px;
+  padding: 14px 22px;
+  background-color: #FFFFFF;
   border: 1px solid var(--line-strong);
   color: var(--charcoal);
   font-family: var(--font-sans);
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -210,24 +273,44 @@
   text-decoration: none;
 }
 
-.btnGhost:hover {
+.btnSecondary:hover {
   border-color: var(--charcoal);
-  background-color: #FFFFFF;
   transform: translateY(-2px);
+  background-color: var(--bg-ivory-warm);
+}
+
+.btnPhone {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 18px;
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--charcoal);
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: var(--radius-pill);
+  transition: all 0.25s ease;
+  text-decoration: none;
+}
+
+.btnPhone:hover {
+  border-color: var(--gold-dark);
+  color: var(--gold-dark);
 }
 
 /* ── RESPONSIVE ── */
-@media (max-width: 1080px) {
-  .headerRow {
+@media (max-width: 1024px) {
+  .visitWrapper {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 40px;
   }
-  .bigGalleryGrid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-  }
-  .imageFrame {
-    height: 400px;
+  .imageCard {
+    aspect-ratio: 16 / 9;
+    max-height: 420px;
   }
 }
 
@@ -236,31 +319,64 @@
     padding: 70px 0;
   }
   .container {
-    padding: 0 24px;
+    padding: 0 20px;
   }
-  .bigGalleryGrid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  .imageCard {
+    aspect-ratio: 4 / 3.4;
+    border-radius: 22px;
   }
-  .cardCenter {
-    transform: none;
+  .topBadge {
+    top: 14px;
+    left: 14px;
+    padding: 6px 12px;
+    font-size: 0.65rem;
   }
-  .imageFrame {
-    height: 340px;
+  .bottomCard {
+    bottom: 14px;
+    left: 14px;
+    right: 14px;
+    padding: 14px 16px;
+    border-radius: 16px;
   }
-  .bottomRow {
+  .bottomTitle {
+    font-size: 1.1rem;
+  }
+  .highlightsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .highlightItem {
+    padding: 12px 14px;
+    gap: 8px;
+    border-radius: 14px;
+  }
+  .iconBox {
+    font-size: 1rem;
+  }
+  .highlightTitle {
+    font-size: 0.78rem;
+  }
+  .highlightDesc {
+    font-size: 0.68rem;
+    line-height: 1.35;
+  }
+  .actions {
     flex-direction: column;
     align-items: stretch;
+    gap: 10px;
   }
-  .featurePills {
-    justify-content: center;
-  }
-  .actionGroup {
-    flex-direction: column;
-    width: 100%;
-  }
-  .btnLuxe, .btnGhost {
+  .btnPrimary, .btnSecondary, .btnPhone {
     width: 100%;
     justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .highlightsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .highlightItem {
+    padding: 10px 10px;
   }
 }

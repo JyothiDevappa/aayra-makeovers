@@ -194,10 +194,32 @@
     padding: 70px 0;
   }
   .container {
-    padding: 0 24px;
+    padding: 0 16px;
   }
   .infoGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .infoCard {
+    padding: 14px 12px;
+    gap: 10px;
+    border-radius: 16px;
+  }
+  .iconCircle {
+    width: 36px;
+    height: 36px;
+    font-size: 0.9rem;
+  }
+  .infoLabel {
+    font-size: 0.6rem;
+  }
+  .infoValue, .infoLink {
+    font-size: 0.78rem;
+  }
+  .bookCard {
+    padding: 14px 12px;
+    font-size: 0.7rem;
+    border-radius: 16px;
   }
   .mapContainer {
     height: 380px;
@@ -209,5 +231,18 @@
     right: 16px;
     max-width: none;
     padding: 18px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .infoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+  .infoCard {
+    padding: 12px 10px;
+  }
+  .infoValue, .infoLink {
+    font-size: 0.72rem;
   }
 }
