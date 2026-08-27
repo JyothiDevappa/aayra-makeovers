@@ -7,7 +7,7 @@ const BEAUTY_SERVICES = [
   { href: '/services', label: 'Nourishing Hair Spa' },
   { href: '/services', label: 'Radiant Skin Facials' },
   { href: '/services', label: 'Eyebrows & Threading' },
-  { href: '/hair-styles', label: 'Trending Haircuts' },
+  { href: '/services', label: 'Trending Haircuts' },
   { href: '/services', label: 'Manicure & Pedicure' },
 ]
 

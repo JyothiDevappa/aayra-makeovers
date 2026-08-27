@@ -144,7 +144,7 @@ export default function ServicesCarousel() {
               onClick={() => setActiveTab('parlour')}
               type="button"
             >
-              <span className={styles.tabIcon}>✨</span>
+              <span className={styles.tabIcon}>✦</span>
               <span>Beauty Parlour</span>
             </button>
             <button
@@ -152,7 +152,7 @@ export default function ServicesCarousel() {
               onClick={() => setActiveTab('haircuts')}
               type="button"
             >
-              <span className={styles.tabIcon}>✂️</span>
+              <span className={styles.tabIcon}>❖</span>
               <span>Hair Cuts</span>
             </button>
           </div>

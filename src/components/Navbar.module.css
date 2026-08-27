@@ -5,31 +5,105 @@
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: 24px 0;
+  padding: 0;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  background-color: rgba(250, 248, 245, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background-color: rgba(250, 248, 245, 0.92);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid transparent;
 }
 
 .navbar.scrolled {
-  background-color: rgba(255, 255, 255, 0.94);
+  background-color: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
-  padding: 16px 0;
   border-bottom: 1px solid var(--line);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+/* ── Top Bar (Minimal Height & Luxury Info Ribbon) ── */
+.topBar {
+  background: var(--charcoal);
+  color: #F7F5F0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  font-family: var(--font-sans);
+}
+
+.topInner {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 6px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.topItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.topDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #25D366;
+  box-shadow: 0 0 6px rgba(37, 211, 102, 0.7);
+  display: inline-block;
+  animation: pulseDot 2.2s infinite ease-in-out;
+  flex-shrink: 0;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.45; transform: scale(0.85); }
+}
+
+.topText {
+  color: #F0ECE1;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.topMail {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #DFBE7A;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.topMail:hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.topMail svg {
+  color: #DFBE7A;
+  flex-shrink: 0;
 }
 
 .inner {
   max-width: 1360px;
   margin: 0 auto;
-  padding: 0 48px;
+  padding: 16px 48px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 32px;
+  transition: padding 0.3s ease;
+}
+
+.navbar.scrolled .inner {
+  padding: 12px 48px;
 }
 
 /* ── Logo (Maison Auré Style) ── */
@@ -203,26 +277,27 @@
   pointer-events: all;
 }
 
-/* ── Sidebar ── */
+/* ── Sidebar (GPU Transform prevents horizontal scrolling) ── */
 .sidebar {
   position: fixed;
   top: 0;
-  right: -420px;
-  width: min(360px, 88vw);
+  right: 0;
+  transform: translateX(100%);
+  width: min(350px, 85vw);
   height: 100vh;
   background: #FFFFFF;
   border-left: 1px solid var(--line);
   z-index: 1100;
   display: flex;
   flex-direction: column;
-  padding: 32px 28px 40px;
-  transition: right 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 30px 24px 36px;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   overflow-y: auto;
   box-shadow: -10px 0 30px rgba(0, 0, 0, 0.08);
 }
 
 .sidebarOpen {
-  right: 0;
+  transform: translateX(0);
 }
 
 .sideHeader {
@@ -337,6 +412,20 @@
   text-decoration: none;
 }
 
+.sideMail {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold-dark);
+  text-decoration: none;
+  word-break: break-all;
+  transition: color 0.2s ease;
+}
+
+.sideMail:hover {
+  color: var(--charcoal);
+}
+
 .sideInfo {
   margin-top: 6px;
   padding-top: 10px;
@@ -376,6 +465,15 @@
 
 /* ── Responsive ── */
 @media (max-width: 960px) {
+  .topInner {
+    padding: 6px 20px;
+  }
+  .inner {
+    padding: 14px 20px;
+  }
+  .navbar.scrolled .inner {
+    padding: 10px 20px;
+  }
   .desktopNav {
     display: none;
   }
@@ -385,22 +483,49 @@
   .hamburger {
     display: flex;
   }
-  .inner {
-    padding: 0 20px;
+  .logoText {
+    font-size: 1.45rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 560px) {
+  .topBar {
+    font-size: 0.67rem;
+  }
+  .topInner {
+    padding: 5px 16px;
+    gap: 10px;
+  }
+  .topText {
+    font-size: 0.67rem;
+  }
+  .topMail {
+    font-size: 0.67rem;
+  }
   .inner {
-    padding: 0 16px;
+    padding: 12px 16px;
+  }
+  .navbar.scrolled .inner {
+    padding: 8px 16px;
+  }
+  .logoText {
+    font-size: 1.35rem;
   }
   .sidebar {
-    width: 86vw;
-    max-width: 360px;
-    right: -90vw;
-    padding: 28px 22px 36px;
+    width: 85vw;
+    max-width: 340px;
+    padding: 26px 20px 32px;
   }
-  .sidebarOpen {
-    right: 0;
+}
+
+@media (max-width: 400px) {
+  .topInner {
+    padding: 4px 12px;
+  }
+  .topText {
+    font-size: 0.62rem;
+  }
+  .topMail {
+    font-size: 0.62rem;
   }
 }

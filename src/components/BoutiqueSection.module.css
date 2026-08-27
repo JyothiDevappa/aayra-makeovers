@@ -1,0 +1,328 @@
+.section {
+  background-color: var(--bg-ivory);
+  padding: 100px 0 110px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+
+.container {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+/* ── 2 COLUMN GRID ── */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ── LEFT: IMAGE CARD ── */
+.imageCol {
+  position: relative;
+}
+
+.imageCard {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: var(--shadow-luxe);
+  background-color: var(--bg-ivory-warm);
+  border: 1px solid var(--line);
+  aspect-ratio: 4 / 4.8;
+}
+
+.boutiqueImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.imageCard:hover .boutiqueImg {
+  transform: scale(1.05);
+}
+
+.imgOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(26, 24, 23, 0.08) 0%, rgba(26, 24, 23, 0.6) 100%);
+  pointer-events: none;
+}
+
+/* ── FLOATING LUXURY BADGE ── */
+.floatingBadge {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-float);
+  transition: transform 0.3s ease;
+}
+
+.floatingBadge:hover {
+  transform: translateY(-2px);
+}
+
+.badgeStar {
+  color: var(--gold-dark);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.badgeTitle {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--charcoal);
+  line-height: 1.2;
+}
+
+.badgeSub {
+  font-family: var(--font-sans);
+  font-size: 0.74rem;
+  color: var(--charcoal-soft);
+  margin-top: 2px;
+}
+
+/* ── RIGHT: TEXT CONTENT ── */
+.textCol {
+  display: flex;
+  flex-direction: column;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold-dark);
+  margin-bottom: 14px;
+}
+
+.eyebrowLine {
+  display: inline-block;
+  width: 24px;
+  height: 1px;
+  background-color: var(--gold);
+}
+
+.heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.2rem, 3.8vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.1;
+  color: var(--charcoal);
+  letter-spacing: -0.01em;
+  margin-bottom: 16px;
+}
+
+.headingGold {
+  color: var(--gold-dark);
+  font-style: italic;
+}
+
+.body {
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: var(--charcoal-soft);
+  margin-bottom: 28px;
+}
+
+/* ── OFFERINGS GRID ── */
+.offeringsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.offeringCard {
+  background: #FFFFFF;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  box-shadow: var(--shadow-card);
+  transition: all 0.3s ease;
+}
+
+.offeringCard:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(184, 147, 78, 0.12);
+}
+
+.offeringIcon {
+  font-size: 1.35rem;
+  line-height: 1;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.offeringTitle {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--charcoal);
+  margin-bottom: 3px;
+  line-height: 1.25;
+}
+
+.offeringDesc {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  color: var(--charcoal-soft);
+  line-height: 1.45;
+}
+
+/* ── ACTION ROW ── */
+.actionRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background-color: var(--charcoal);
+  color: #FFFFFF;
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.35s ease;
+  box-shadow: 0 6px 20px rgba(26, 24, 23, 0.12);
+}
+
+.btnPrimary svg {
+  transition: transform 0.3s ease;
+}
+
+.btnPrimary:hover {
+  background-color: var(--gold-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(184, 147, 78, 0.3);
+}
+
+.btnPrimary:hover svg {
+  transform: translateX(4px);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  background-color: transparent;
+  color: var(--charcoal);
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.35s ease;
+}
+
+.btnSecondary svg {
+  transition: transform 0.3s ease;
+}
+
+.btnSecondary:hover {
+  border-color: var(--gold-dark);
+  color: var(--gold-dark);
+  background-color: var(--bg-card);
+  transform: translateY(-2px);
+}
+
+.btnSecondary:hover svg {
+  transform: translateX(3px);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1080px) {
+  .layerCard {
+    padding: 36px 32px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .imageCard {
+    aspect-ratio: 16 / 10;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 0 0 70px;
+  }
+  .container {
+    padding: 0 16px;
+  }
+  .layerCard {
+    padding: 24px 18px;
+    border-radius: 24px;
+    top: 115px;
+  }
+  .offeringsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .actionRow {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+  .btnPrimary,
+  .btnSecondary {
+    justify-content: center;
+    width: 100%;
+  }
+  .floatingBadge {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    padding: 12px 16px;
+  }
+  .badgeTitle {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .imageCard {
+    aspect-ratio: 1 / 1;
+    border-radius: 20px;
+  }
+}
