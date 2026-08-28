@@ -29,6 +29,11 @@ export default function Navbar() {
     return () => { document.body.style.overflow = '' }
   }, [sidebarOpen])
 
+  const handleNavClick = () => {
+    setSidebarOpen(false)
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
+  }
+
   return (
     <>
       <header className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
@@ -53,7 +58,7 @@ export default function Navbar() {
 
         <div className={styles.inner}>
           {/* Brand Logo in Maison Auré luxury style */}
-          <NavLink to="/" className={styles.logo} onClick={() => setSidebarOpen(false)}>
+          <NavLink to="/" className={styles.logo} onClick={handleNavClick}>
             <span className={styles.logoText}>
               Aayra <span className={styles.logoGold}>Makeovers</span>
             </span>
@@ -66,6 +71,7 @@ export default function Navbar() {
                 key={path}
                 to={path}
                 className={({ isActive }) => `${styles.link} ${isActive ? styles.active : ''}`}
+                onClick={handleNavClick}
               >
                 {label}
               </NavLink>
@@ -115,7 +121,7 @@ export default function Navbar() {
               key={path}
               to={path}
               className={({ isActive }) => `${styles.sideLink} ${isActive ? styles.sideLinkActive : ''}`}
-              onClick={() => setSidebarOpen(false)}
+              onClick={handleNavClick}
             >
               <span>{label}</span>
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.sideArrow}>

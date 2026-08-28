@@ -62,6 +62,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+::selection {
+  background-color: rgba(201, 169, 106, 0.35);
+  color: var(--charcoal);
+}
+
+::-moz-selection {
+  background-color: rgba(201, 169, 106, 0.35);
+  color: var(--charcoal);
+}
+
 img {
   display: block;
   max-width: 100%;

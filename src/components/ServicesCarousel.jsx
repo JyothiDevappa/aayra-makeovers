@@ -5,6 +5,7 @@ import styles from './ServicesCarousel.module.css'
 import hairspa  from '../assets/img/parlour/hairspa.webp'
 import facial   from '../assets/img/parlour/facial.webp'
 import eyebrows from '../assets/img/parlour/eyebrows.webp'
+import nailCare from '../assets/img/parlour/nail-care.webp'
 import layerCut from '../assets/img/parlour/layer_cut.jpg'
 import vCut     from '../assets/img/parlour/v_cut.jpg'
 import uCut     from '../assets/img/parlour/u_cut.jpg'
@@ -48,18 +49,8 @@ const parlourServices = [
     highlights: ['Foot Scrub & Massage', 'Hand Glow Treatment', 'Clean Cuticles'],
     price: 'From ₹500',
     tag: 'Nail Care',
-    img: facial,
+    img: nailCare,
     waMsg: 'Hello Pallavi, I would like to book a Manicure & Pedicure appointment at Aayra Makeovers.'
-  },
-  {
-    num: 'No. 05',
-    title: 'Skin Bleach & De-Tan Cleanup',
-    desc: 'Herbal face bleach, instant sun tan removal, neck & hand de-tan packs for even and bright skin tone.',
-    highlights: ['Instant Sun De-Tan', 'Herbal Bleach', 'Even Skin Tone'],
-    price: 'From ₹350',
-    tag: 'De-Tan Care',
-    img: facial,
-    waMsg: 'Hello Pallavi, I would like to book a De-Tan Cleanup appointment at Aayra Makeovers.'
   }
 ]
 

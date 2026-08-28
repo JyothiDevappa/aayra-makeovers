@@ -99,7 +99,7 @@ export default function MapSection() {
             <h3 className={styles.mocTitle}>Aayra Makeovers</h3>
             <p className={styles.mocSub}>Near Chamarajanagar Town, Karnataka 571440</p>
             <a
-              href="https://maps.google.com/?q=11.925806,76.938252"
+              href="https://maps.google.com/?q=11.9258437,76.9380792"
               target="_blank"
               rel="noreferrer"
               className={styles.mocLink}
@@ -114,11 +114,11 @@ export default function MapSection() {
 
           <iframe
             title="Aayra Makeovers Location"
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d245.20060403295483!2d76.93825152985177!3d11.925806254668887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTHCsDU1JzMyLjkiTiA3NsKwNTYnMTcuNyJF!5e0!3m2!1sen!2sin!4v1720000000000"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d243.98134906013237!2d76.93807916319349!3d11.925843725990712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1787928755254!5m2!1sen!2sin"
             className={styles.iframe}
             allowFullScreen
             loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
+            referrerPolicy="strict-origin-when-cross-origin"
           />
         </motion.div>
 

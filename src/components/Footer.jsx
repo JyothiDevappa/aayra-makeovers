@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import styles from './Footer.module.css'
 
@@ -95,9 +96,9 @@ export default function Footer() {
             <ul className={styles.linkList}>
               {BEAUTY_SERVICES.map((item, idx) => (
                 <li key={idx}>
-                  <a href={item.href} className={styles.footerLink}>
+                  <Link to={item.href} className={styles.footerLink}>
                     <span className={styles.linkDot}>✦</span> {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -109,9 +110,9 @@ export default function Footer() {
             <ul className={styles.linkList}>
               {BRIDAL_TAILORING.map((item, idx) => (
                 <li key={idx}>
-                  <a href={item.href} className={styles.footerLink}>
+                  <Link to={item.href} className={styles.footerLink}>
                     <span className={styles.linkDot}>✦</span> {item.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

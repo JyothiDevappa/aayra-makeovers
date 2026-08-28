@@ -3,7 +3,7 @@ import styles from './AboutStrip.module.css'
 import shopImg from '../assets/img/shop/shop_img_1.jpeg'
 
 const WA = 'https://wa.me/919686457628?text=Hello%20Pallavi%2C%20I%20would%20like%20to%20visit%20Aayra%20Makeovers%20Studio.'
-const MAPS_URL = 'https://maps.google.com/?q=Aayra+Makeovers+Beauty+Parlour+and+Tailoring+Chamarajanagar'
+const MAPS_URL = 'https://maps.google.com/?q=11.9258437,76.9380792'
 
 export default function AboutStrip() {
   return (

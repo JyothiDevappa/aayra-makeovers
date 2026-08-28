@@ -81,9 +81,9 @@
 .imageCard {
   position: relative;
   width: 100%;
-  max-width: 480px;
-  aspect-ratio: 4 / 4.6;
-  max-height: 500px;
+  max-width: 440px;
+  aspect-ratio: 3 / 4;
+  max-height: 540px;
   border-radius: 24px;
   overflow: hidden;
   box-shadow: var(--shadow-luxe);
@@ -95,6 +95,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
   display: block;
   transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -379,18 +380,52 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 1080px) {
+  .layerCard {
+    position: sticky;
+    width: 100%;
+    min-height: auto;
+    box-sizing: border-box;
+  }
+
+  .card1 {
+    position: sticky;
+    top: -80px;
+    z-index: 1;
+    background: #FAF8F5;
+    padding: 56px 0 60px;
+    margin-bottom: 25vh;
+    box-shadow: 0 10px 40px rgba(26, 24, 23, 0.08);
+  }
+
+  .card2 {
+    position: sticky;
+    top: 60px;
+    z-index: 2;
+    background: #FFFFFF;
+    box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.16), 0 25px 60px rgba(0, 0, 0, 0.12);
+  }
+
   .splitGrid {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 36px;
   }
+
+  .imageCol {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
   .imageCard {
-    max-width: 100%;
-    aspect-ratio: 16 / 11;
-    max-height: 420px;
+    max-width: 380px;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    max-height: 480px;
   }
+
   .galleryInner {
     padding: 60px 32px;
   }
+
   .collectionGrid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -398,40 +433,114 @@
 
 @media (max-width: 768px) {
   .layerCard {
+    position: sticky;
     min-height: auto;
-    padding: 40px 0;
+    box-sizing: border-box;
   }
+
+  .card1 {
+    position: sticky;
+    top: -140px;
+    z-index: 1;
+    background: #FAF8F5;
+    padding: 40px 0 48px;
+    /* Scrolling gap runway so the image remains fully in the middle before card2 covers it */
+    margin-bottom: 30vh;
+    box-shadow: 0 10px 30px rgba(26, 24, 23, 0.08);
+  }
+
+  .card2 {
+    position: sticky;
+    top: 55px;
+    z-index: 2;
+    background: #FFFFFF;
+    /* Shadow giving prominent stacked card appearance */
+    box-shadow: 0 -20px 50px rgba(0, 0, 0, 0.22), 0 25px 60px rgba(0, 0, 0, 0.14);
+  }
+
   .container {
     padding: 0 20px;
   }
+
+  .splitGrid {
+    gap: 24px;
+  }
+
+  .eyebrow {
+    margin-bottom: 12px;
+  }
+
+  .heading {
+    margin-bottom: 14px;
+  }
+
+  .body {
+    margin-bottom: 18px;
+    font-size: 0.9rem;
+    line-height: 1.55;
+  }
+
   .highlightGrid {
     grid-template-columns: 1fr;
     gap: 8px;
+    margin-bottom: 22px;
   }
+
   .actionRow {
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    gap: 10px;
   }
+
   .btnPrimary, .btnGhost {
     width: 100%;
     justify-content: center;
+    padding: 13px 20px;
+    font-size: 0.74rem;
   }
+
+  .imageCol {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 100%;
+  }
+
   .imageCard {
-    aspect-ratio: 1 / 1;
-    max-height: 360px;
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 3 / 4;
+    max-height: 440px;
+    border-radius: 20px;
+    margin: 0 auto;
   }
+
   .galleryInner {
-    padding: 48px 20px;
+    padding: 48px 20px 60px;
   }
+
   .collectionGrid {
     grid-template-columns: repeat(2, 1fr);
     gap: 12px;
   }
+
   .mainBadge {
-    left: 14px;
-    bottom: 14px;
-    padding: 6px 14px;
-    font-size: 0.68rem;
+    left: 12px;
+    bottom: 12px;
+    padding: 6px 12px;
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card1 {
+    top: -160px;
+    padding: 32px 0 40px;
+    margin-bottom: 35vh;
+  }
+
+  .imageCard {
+    max-width: 300px;
+    aspect-ratio: 3 / 4;
+    max-height: 400px;
   }
 }

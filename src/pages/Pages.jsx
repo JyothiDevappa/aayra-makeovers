@@ -215,7 +215,6 @@ const menuSpreads = [
       pageNum: 'Page 03',
       tagline: 'Botanical and gold glow rituals for clear, radiant skin',
       items: [
-        { name: '24K Gold Luxury Radiance Facial', desc: 'Pure gold bio-collagen essence for royal illumination, firmness, and instant celebration glow.' },
         { name: 'Herbal Fruit Glow & Hydration Facial', desc: 'Natural papaya, orange, and berry fruit enzymes to gently exfoliate and deeply nourish skin.' },
         { name: 'Diamond Brightening Complex Facial', desc: 'Advanced micro-resurfacing facial for spotless clarity, even skin tone, and luminous finish.' },
         { name: 'Anti-Tan Sun Defense Facial', desc: 'Targeted botanical melanin-reducing cleanup for sun-damaged and pigmented skin.' },

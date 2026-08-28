@@ -5,9 +5,9 @@ import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import styles from './Hero.module.css'
 
-import hero1 from '../assets/img/hero_images/hero-slider-1.jpg'
-import hero2 from '../assets/img/hero_images/hero-slider-2.jpg'
-import hero3 from '../assets/img/hero_images/hero-slider-3.jpg'
+import hero1 from '../assets/img/hero_images/hero-slider-1.webp'
+import hero2 from '../assets/img/hero_images/hero-slider-2.webp'
+import hero3 from '../assets/img/hero_images/hero-slider-3.webp'
 
 const slides = [
   { img: hero1, alt: 'Aayra Makeovers Bridal Styling' },
@@ -63,7 +63,7 @@ export default function Hero() {
               <span>+91 96864 57628</span>
             </a>
             <a
-              href="https://maps.google.com/?q=11.925806,76.938252"
+              href="https://maps.google.com/?q=11.9258437,76.9380792"
               target="_blank"
               rel="noreferrer"
               className={styles.btnGhost}
