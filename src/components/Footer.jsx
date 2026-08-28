@@ -133,7 +133,7 @@ export default function Footer() {
                 <span className={styles.infoIcon}>🕐</span>
                 <div>
                   <strong>Studio Hours</strong>
-                  <p>9:30 AM – 8:30 PM · All 7 Days</p>
+                  <p>10:00 AM – 7:00 PM · All 7 Days</p>
                 </div>
               </div>
               <div className={styles.infoRow}>

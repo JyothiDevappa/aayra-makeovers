@@ -427,7 +427,7 @@ export function ServicesPage() {
         <div className={styles.ctaBanner}>
           <div className={styles.ctaText}>
             <h3>Ready to Book Your Salon Session?</h3>
-            <p>Walk-ins and advance bookings welcome daily from 9:30 AM to 8:30 PM. Message Pallavi directly on WhatsApp to check slot availability.</p>
+            <p>Walk-ins and advance bookings welcome daily from 10:00 AM to 7:00 PM. Message Pallavi directly on WhatsApp to check slot availability.</p>
           </div>
           <div className={styles.ctaBtnGroup}>
             <a href={WA_MAIN} target="_blank" rel="noreferrer" className={styles.ctaBtn}>

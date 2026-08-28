@@ -42,7 +42,7 @@ export default function Navbar() {
           <div className={styles.topInner}>
             <div className={styles.topItem}>
               <span className={styles.topDot} />
-              <span className={styles.topText}>Everyday Open · 9:30 AM – 8:30 PM</span>
+              <span className={styles.topText}>Everyday Open · 10:00 AM – 7:00 PM</span>
             </div>
             <div className={styles.topItem}>
               <a href="mailto:aayramakeovers@gmail.com" className={styles.topMail}>
@@ -143,7 +143,7 @@ export default function Navbar() {
           </a>
           <div className={styles.sideInfo}>
             <p>📍 Chamarajanagar, Karnataka</p>
-            <p>🕐 9:30 AM – 8:30 PM · Open Daily</p>
+            <p>🕐 10:00 AM – 7:00 PM · Open Daily</p>
           </div>
         </div>
 

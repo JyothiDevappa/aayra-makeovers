@@ -32,7 +32,7 @@ export default function AboutStrip() {
               {/* Floating Badges */}
               <div className={styles.topBadge}>
                 <span className={styles.badgeDot}>●</span>
-                <span>Open Daily · 9:30 AM – 8:30 PM</span>
+                <span>Open Daily · 10:00 AM – 7:00 PM</span>
               </div>
               
               <div className={styles.bottomCard}>

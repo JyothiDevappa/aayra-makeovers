@@ -44,7 +44,7 @@ export default function MapSection() {
             </div>
             <div>
               <p className={styles.infoLabel}>Studio Hours</p>
-              <p className={styles.infoValue}>9:30 AM – 8:30 PM · All 7 Days</p>
+              <p className={styles.infoValue}>10:00 AM – 7:00 PM · All 7 Days</p>
             </div>
           </motion.div>
 

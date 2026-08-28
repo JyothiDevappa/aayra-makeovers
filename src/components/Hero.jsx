@@ -36,7 +36,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
           >
             <span className={styles.eyebrowLine} />
-            Open Daily · 9:30 AM – 8:30 PM
+            Open Daily · 10:00 AM – 7:00 PM
           </motion.div>
 
           <motion.h1
