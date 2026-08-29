@@ -11,17 +11,17 @@ const homeStructuredData = {
   '@graph': [
     {
       '@type': 'BeautySalon',
-      '@id': 'https://aayramakeovers.com/#business',
+      '@id': 'https://aayramakeovers.in/#business',
       'name': 'Aayra Makeovers',
       'alternateName': [
         'Aayra Makeovers Chamarajanagar',
         'Aayra Beauty Parlour Chamarajanagar',
         'Aayra Boutique & Tailoring Studio',
       ],
-      'url': 'https://aayramakeovers.com',
+      'url': 'https://aayramakeovers.in',
       'telephone': '+91-9686457628',
       'email': 'aayramakeovers@gmail.com',
-      'image': 'https://aayramakeovers.com/assets/img/shop/shop_img_1.jpeg',
+      'image': 'https://aayramakeovers.in/assets/img/shop/shop_img_1.jpeg',
       'description':
         'Aayra Makeovers is a premier ladies beauty parlour & custom tailoring studio in Chamarajanagar founded by Pallavi. Providing HD bridal makeup, hair spa, facials, haircuts, and designer blouse stitching & Aari needlework.',
       'priceRange': '₹₹',
@@ -115,13 +115,13 @@ const homeStructuredData = {
     },
     {
       '@type': 'WebSite',
-      '@id': 'https://aayramakeovers.com/#website',
-      'url': 'https://aayramakeovers.com',
+      '@id': 'https://aayramakeovers.in/#website',
+      'url': 'https://aayramakeovers.in',
       'name': 'Aayra Makeovers',
       'description':
         'Best Beauty Parlour, Bridal Makeup & Tailoring Studio in Chamarajanagar by Pallavi.',
       'publisher': {
-        '@id': 'https://aayramakeovers.com/#business',
+        '@id': 'https://aayramakeovers.in/#business',
       },
     },
   ],
@@ -133,7 +133,7 @@ export default function Home() {
       <SEO
         title="Aayra Makeovers | Best Beauty Parlour & Tailoring Studio in Chamarajanagar"
         description="Aayra Makeovers is a premier ladies beauty parlour & custom tailoring studio in Chamarajanagar by Pallavi. Offering bridal makeup, hair spa, facials & designer blouse stitching."
-        canonical="https://aayramakeovers.com/"
+        canonical="https://aayramakeovers.in/"
         structuredData={homeStructuredData}
       />
       <Hero />

@@ -1,8 +1,8 @@
 import { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
-const BASE_URL = 'https://aayramakeovers.com'
-const DEFAULT_IMAGE = 'https://aayramakeovers.com/assets/hero-slider-1-CaJm1hd0.webp'
+const BASE_URL = 'https://aayramakeovers.in'
+const DEFAULT_IMAGE = 'https://aayramakeovers.in/assets/hero-slider-1-CaJm1hd0.webp'
 
 function setMetaTag(attrName, attrValue, content) {
   let element = document.querySelector(`meta[${attrName}="${attrValue}"]`)

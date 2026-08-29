@@ -76,8 +76,8 @@ const bridalBreadcrumbs = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   'itemListElement': [
-    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.com/' },
-    { '@type': 'ListItem', 'position': 2, 'name': 'Bridal Makeup Artist', 'item': 'https://aayramakeovers.com/bridal' },
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.in/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Bridal Makeup Artist', 'item': 'https://aayramakeovers.in/bridal' },
   ],
 }
 
@@ -94,7 +94,7 @@ export function BridalPage() {
       <SEO
         title="Bridal Makeup Artist in Chamarajanagar | Wedding Packages | Aayra Makeovers"
         description="Looking for the best bridal makeup artist in Chamarajanagar? Aayra Makeovers by Pallavi offers HD & airbrush bridal makeup, saree pleating & wedding styling."
-        canonical="https://aayramakeovers.com/bridal"
+        canonical="https://aayramakeovers.in/bridal"
         structuredData={bridalStructuredData}
         breadcrumbs={bridalBreadcrumbs}
       />
@@ -374,8 +374,8 @@ const servicesBreadcrumbs = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   'itemListElement': [
-    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.com/' },
-    { '@type': 'ListItem', 'position': 2, 'name': 'Services', 'item': 'https://aayramakeovers.com/services' },
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.in/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Services', 'item': 'https://aayramakeovers.in/services' },
   ],
 }
 
@@ -385,7 +385,7 @@ export function ServicesPage() {
       <SEO
         title="Beauty Parlour Services & Salon Menu in Chamarajanagar | Aayra Makeovers"
         description="Explore beauty parlour and salon services in Chamarajanagar at Aayra Makeovers. Precision haircuts, herbal facials, hair spa, gentle threading, waxing & nail care by Pallavi."
-        canonical="https://aayramakeovers.com/services"
+        canonical="https://aayramakeovers.in/services"
         structuredData={servicesStructuredData}
         breadcrumbs={servicesBreadcrumbs}
       />
@@ -609,8 +609,8 @@ const tailoringBreadcrumbs = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   'itemListElement': [
-    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.com/' },
-    { '@type': 'ListItem', 'position': 2, 'name': 'Blouses & Tailoring', 'item': 'https://aayramakeovers.com/tailoring' },
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.in/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Blouses & Tailoring', 'item': 'https://aayramakeovers.in/tailoring' },
   ],
 }
 
@@ -620,7 +620,7 @@ export function TailoringPage() {
       <SEO
         title="Designer Blouse Stitching & Ladies Tailoring in Chamarajanagar | Aayra Makeovers"
         description="Custom blouse stitching & designer ladies tailoring in Chamarajanagar. Handcrafted bridal Aari maggam work, princess cut blouse fitting & dress stitching by Pallavi."
-        canonical="https://aayramakeovers.com/tailoring"
+        canonical="https://aayramakeovers.in/tailoring"
         structuredData={tailoringStructuredData}
         breadcrumbs={tailoringBreadcrumbs}
       />
@@ -760,8 +760,8 @@ const aboutBreadcrumbs = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   'itemListElement': [
-    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.com/' },
-    { '@type': 'ListItem', 'position': 2, 'name': 'About Pallavi & Studio', 'item': 'https://aayramakeovers.com/about' },
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.in/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'About Pallavi & Studio', 'item': 'https://aayramakeovers.in/about' },
   ],
 }
 
@@ -771,7 +771,7 @@ export function AboutPage() {
       <SEO
         title="About Aayra Makeovers | Master Stylist & Tailor Pallavi | Chamarajanagar"
         description="Learn about Aayra Makeovers in Chamarajanagar, founded by stylist & tailor Pallavi. A private 1-on-1 beauty parlour and bespoke tailoring boutique for women & kids."
-        canonical="https://aayramakeovers.com/about"
+        canonical="https://aayramakeovers.in/about"
         structuredData={aboutStructuredData}
         breadcrumbs={aboutBreadcrumbs}
       />
@@ -956,8 +956,8 @@ const contactBreadcrumbs = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   'itemListElement': [
-    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.com/' },
-    { '@type': 'ListItem', 'position': 2, 'name': 'Contact & Location', 'item': 'https://aayramakeovers.com/contact' },
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.in/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Contact & Location', 'item': 'https://aayramakeovers.in/contact' },
   ],
 }
 
@@ -967,7 +967,7 @@ export function ContactPage() {
       <SEO
         title="Contact Aayra Makeovers | Beauty Parlour & Studio in Chamarajanagar"
         description="Visit or contact Aayra Makeovers in Chamarajanagar, Karnataka. Open daily 10 AM - 7 PM for beauty parlour appointments, bridal bookings & tailoring consultations."
-        canonical="https://aayramakeovers.com/contact"
+        canonical="https://aayramakeovers.in/contact"
         structuredData={contactStructuredData}
         breadcrumbs={contactBreadcrumbs}
       />

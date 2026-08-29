@@ -3,5 +3,5 @@ User-agent: *
 Allow: /
 
 # Host & Sitemap
-Host: https://aayramakeovers.com
-Sitemap: https://aayramakeovers.com/sitemap.xml
+Host: https://aayramakeovers.in
+Sitemap: https://aayramakeovers.in/sitemap.xml

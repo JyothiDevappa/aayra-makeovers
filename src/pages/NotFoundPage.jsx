@@ -8,7 +8,7 @@ export default function NotFoundPage() {
       <SEO
         title="Page Not Found (404) | Aayra Makeovers Chamarajanagar"
         description="The page you are looking for does not exist. Explore our beauty parlour services, bridal makeup packages, or designer blouse stitching in Chamarajanagar."
-        canonical="https://aayramakeovers.com/404"
+        canonical="https://aayramakeovers.in/404"
       />
 
       <section className={styles.container}>
