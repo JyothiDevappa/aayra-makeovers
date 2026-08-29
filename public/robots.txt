@@ -1,0 +1,7 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Host & Sitemap
+Host: https://aayramakeovers.com
+Sitemap: https://aayramakeovers.com/sitemap.xml

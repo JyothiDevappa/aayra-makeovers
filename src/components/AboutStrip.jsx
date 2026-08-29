@@ -23,7 +23,7 @@ export default function AboutStrip() {
             <div className={styles.imageCard}>
               <img
                 src={shopImg}
-                alt="Visit Aayra Makeovers Studio & Boutique"
+                alt="Inside Aayra Makeovers Beauty Parlour and Tailoring Studio in Chamarajanagar, Karnataka"
                 className={styles.studioImg}
                 loading="lazy"
               />
@@ -57,7 +57,7 @@ export default function AboutStrip() {
             </div>
 
             <h2 className={styles.heading}>
-              Visit Our <span className={styles.headingGold}>Shop.</span>
+              Visit Our <span className={styles.headingGold}>Studio in Chamarajanagar.</span>
             </h2>
 
             <p className={styles.description}>

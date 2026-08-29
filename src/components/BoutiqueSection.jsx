@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import styles from './BoutiqueSection.module.css'
 import designerBack from '../assets/img/tailoring/designer_back_blouse.jpg'
@@ -39,7 +38,7 @@ export default function BoutiqueSection() {
               <div className={styles.imageCard}>
                 <img
                   src={designerBack}
-                  alt="Designer Back Blouse & Aari Embroidery by Aayra Makeovers"
+                  alt="Designer Back Blouse Tailoring & Handcrafted Aari Embroidery in Chamarajanagar by Pallavi"
                   className={styles.boutiqueImg}
                   loading="lazy"
                 />
@@ -64,7 +63,7 @@ export default function BoutiqueSection() {
               </div>
 
               <h2 className={styles.heading}>
-                Bespoke Bridal Blouses &amp; <span className={styles.headingGold}>Handcrafted Aari.</span>
+                Designer Blouse Stitching &amp; <span className={styles.headingGold}>Bridal Aari Work.</span>
               </h2>
 
               <p className={styles.body}>

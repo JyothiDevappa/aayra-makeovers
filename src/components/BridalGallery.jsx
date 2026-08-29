@@ -16,10 +16,10 @@ const bridalHighlights = [
 ]
 
 const collection = [
-  { img: m1, title: 'Traditional Muhurtham' },
-  { img: m2, title: 'Royal Reception' },
-  { img: m3, title: 'Engagement Glam' },
-  { img: m4, title: 'Haldi & Mehndi Art' },
+  { img: m1, title: 'Traditional South Indian Muhurtham Bridal Makeup by Pallavi in Chamarajanagar' },
+  { img: m2, title: 'Grand Reception Glam Makeup and Hair Styling in Chamarajanagar' },
+  { img: m3, title: 'Silk Saree Draping & Box Pleating for Bride in Chamarajanagar' },
+  { img: m4, title: 'Haldi and Pre-Wedding Floral Makeup Artistry in Chamarajanagar' },
 ]
 
 export default function BridalGallery() {
@@ -40,11 +40,11 @@ export default function BridalGallery() {
                 </div>
 
                 <h2 className={styles.heading}>
-                  Complete Bridal Makeup &amp; <span className={styles.headingGold}>Wedding Styling.</span>
+                  Bridal Makeup Artist &amp; <span className={styles.headingGold}>Wedding Styling.</span>
                 </h2>
 
                 <p className={styles.body}>
-                  Experience dedicated one-on-one bridal artistry with flawless HD base, customized hair braids, and authentic silk saree draping by Pallavi.
+                  Experience dedicated one-on-one bridal artistry with flawless HD base, customized hair braids, and authentic silk saree draping by Pallavi in Chamarajanagar.
                 </p>
 
                 {/* Concise Highlights */}
@@ -80,7 +80,7 @@ export default function BridalGallery() {
               {/* Right: Contained Image Frame */}
               <div className={styles.imageCol}>
                 <div className={styles.imageCard}>
-                  <img src={m1} alt="Bridal Makeup by Pallavi" className={styles.coverImg} loading="lazy" />
+                  <img src={m1} alt="Bridal Makeup Artist Pallavi at Aayra Makeovers Chamarajanagar" className={styles.coverImg} loading="lazy" />
                 </div>
               </div>
 

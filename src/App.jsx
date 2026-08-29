@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import WhatsAppFab from './components/WhatsAppFab'
 import Home from './pages/Home'
 import { ServicesPage, BridalPage, TailoringPage, AboutPage, ContactPage } from './pages/Pages'
+import NotFoundPage from './pages/NotFoundPage'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/tailoring" element={<TailoringPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </main>
       <Footer />
@@ -27,3 +29,4 @@ export default function App() {
     </>
   )
 }
+

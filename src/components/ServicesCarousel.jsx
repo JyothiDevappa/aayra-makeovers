@@ -178,7 +178,7 @@ export default function ServicesCarousel() {
                   <div className={styles.cardImgWrap}>
                     <img
                       src={service.img}
-                      alt={service.title}
+                      alt={`${service.title} - Aayra Makeovers Chamarajanagar`}
                       className={styles.cardImg}
                       loading="lazy"
                     />

@@ -1,7 +1,6 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
+import SEO from '../components/SEO'
 import styles from './PageStyles.module.css'
-import ServicesCarousel from '../components/ServicesCarousel'
 import MapSection from '../components/MapSection'
 
 // Bridal Page Assets
@@ -9,13 +8,6 @@ import m1 from '../assets/img/bridal_makeup/makeup_1.jpeg'
 import m2 from '../assets/img/bridal_makeup/makeup_2.jpeg'
 import m3 from '../assets/img/bridal_makeup/makeup_3.jpeg'
 import m4 from '../assets/img/bridal_makeup/makeup_4.jpeg'
-
-// HairStyles Page Assets
-import layerCutImg from '../assets/img/parlour/layer_cut.jpg'
-import vCutImg from '../assets/img/parlour/v_cut.jpg'
-import uCutImg from '../assets/img/parlour/u_cut.jpg'
-import bobCutImg from '../assets/img/parlour/bob_cut.jpg'
-import hairspaImg from '../assets/img/parlour/hairspa.webp'
 
 // Boutique & Tailoring Assets
 import b1 from '../assets/img/tailoring/b1.webp'
@@ -46,25 +38,76 @@ const bridalDetailedServices = [
   { title: 'On-Location Venue Travel', desc: 'We travel directly to marriage halls, convention centres, and event venues across Chamarajanagar, Mysore and nearby regions.' }
 ]
 
+const bridalStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'name': 'Bridal Makeup Artist & Wedding Styling in Chamarajanagar',
+  'serviceType': 'Bridal Makeup',
+  'provider': {
+    '@type': 'BeautySalon',
+    'name': 'Aayra Makeovers',
+    'telephone': '+91-9686457628',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressLocality': 'Chamarajanagar',
+      'addressRegion': 'Karnataka',
+      'postalCode': '571440',
+      'addressCountry': 'IN',
+    },
+  },
+  'areaServed': {
+    '@type': 'City',
+    'name': 'Chamarajanagar',
+  },
+  'hasOfferCatalog': {
+    '@type': 'OfferCatalog',
+    'name': 'Bridal Artistry Packages',
+    'itemListElement': [
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Muhurtham HD Bridal Makeup' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Reception Airbrush Makeup' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Authentic Silk Saree Draping & Box Pleating' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Traditional South Indian Poola Jada Hairstyling' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'On-Location Venue Travel in Chamarajanagar' } },
+    ],
+  },
+}
+
+const bridalBreadcrumbs = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.com/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Bridal Makeup Artist', 'item': 'https://aayramakeovers.com/bridal' },
+  ],
+}
+
 export function BridalPage() {
   const images = [
-    { img: m1, title: 'Traditional Muhurtham Look' },
-    { img: m2, title: 'Grand Reception Glam' },
-    { img: m3, title: 'Royal Silk Saree Drape' },
-    { img: m4, title: 'Modern Bridal Silhouette' }
+    { img: m1, title: 'Traditional South Indian Muhurtham Bridal Makeup by Pallavi in Chamarajanagar' },
+    { img: m2, title: 'Grand Reception Evening Glam Makeup & Hair Styling in Chamarajanagar' },
+    { img: m3, title: 'Authentic Royal Silk Saree Box Pleating & Draping in Chamarajanagar' },
+    { img: m4, title: 'Modern Bridal Silhouette & Pre-Wedding Artistry in Chamarajanagar' },
   ]
 
   return (
     <div className={styles.pageWrap}>
+      <SEO
+        title="Bridal Makeup Artist in Chamarajanagar | Wedding Packages | Aayra Makeovers"
+        description="Looking for the best bridal makeup artist in Chamarajanagar? Aayra Makeovers by Pallavi offers HD & airbrush bridal makeup, saree pleating & wedding styling."
+        canonical="https://aayramakeovers.com/bridal"
+        structuredData={bridalStructuredData}
+        breadcrumbs={bridalBreadcrumbs}
+      />
+
       <section className={styles.pageHeader}>
         <motion.p className={styles.tag} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          ✦ Luxury Bridal Makeup
+          ✦ Luxury Bridal Makeup in Chamarajanagar
         </motion.p>
         <motion.h1 className={styles.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-          Bridal Artistry &amp; Packages
+          Bridal Makeup Artist &amp; Packages in Chamarajanagar
         </motion.h1>
         <motion.p className={styles.sub} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          Complete HD &amp; Airbrush bridal makeup, authentic silk saree pleating, traditional hair styling and on-venue services by Pallavi in Chamarajanagar.
+          Complete HD &amp; Airbrush bridal makeup, authentic silk saree pleating, traditional hair styling and on-venue marriage hall services by Pallavi in Chamarajanagar.
         </motion.p>
       </section>
 
@@ -72,7 +115,7 @@ export function BridalPage() {
         {/* Visual Gallery - Clean images without text */}
         <div className={styles.boutiqueSectionHeader}>
           <div className={styles.boutiqueTag}>BRIDAL SHOWCASE</div>
-          <h2 className={styles.boutiqueTitle}>Signature Bridal Looks</h2>
+          <h2 className={styles.boutiqueTitle}>Signature Bridal Looks in Chamarajanagar</h2>
           <p className={styles.patternsSub}>Explore our recent real brides, traditional jewellery styling and muhurtham transformations:</p>
         </div>
 
@@ -156,7 +199,7 @@ export function BridalPage() {
         {/* Booking CTA Banner */}
         <div className={styles.ctaBanner}>
           <div className={styles.ctaText}>
-            <h3>Planning Your Wedding Date?</h3>
+            <h3>Planning Your Wedding Date in Chamarajanagar?</h3>
             <p>We travel to marriage halls and event venues across Chamarajanagar &amp; Mysore. Book early to reserve your dates with Pallavi.</p>
           </div>
           <a href={WA_BRIDAL} target="_blank" rel="noreferrer" className={styles.ctaBtn}>
@@ -291,19 +334,72 @@ const menuSpreads = [
   }
 ]
 
+const servicesStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'name': 'Beauty Parlour & Salon Services in Chamarajanagar',
+  'serviceType': 'Beauty Parlour & Hair Salon Treatments',
+  'provider': {
+    '@type': 'BeautySalon',
+    'name': 'Aayra Makeovers',
+    'telephone': '+91-9686457628',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressLocality': 'Chamarajanagar',
+      'addressRegion': 'Karnataka',
+      'postalCode': '571440',
+      'addressCountry': 'IN',
+    },
+  },
+  'areaServed': {
+    '@type': 'City',
+    'name': 'Chamarajanagar',
+  },
+  'hasOfferCatalog': {
+    '@type': 'OfferCatalog',
+    'name': 'Beauty Parlour Service Booklet',
+    'itemListElement': [
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Haircuts (Layer Cut, Step Cut, Feather Cut, Bob Cut, U/V Cut)' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Luxury Nourishing Hair Spa & Scalp Therapy' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Skin Care, Glow Facials & De-Tan Cleanups' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Eyebrow Arch Shaping & Facial Grooming' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Hygienic Depilatory Waxing' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Spa Pedicure, Manicure & Nail Care' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Silk Saree Box Pleating & Party Makeup' } },
+    ],
+  },
+}
+
+const servicesBreadcrumbs = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.com/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Services', 'item': 'https://aayramakeovers.com/services' },
+  ],
+}
+
 export function ServicesPage() {
   return (
     <div className={styles.pageWrap}>
+      <SEO
+        title="Beauty Parlour Services & Salon Menu in Chamarajanagar | Aayra Makeovers"
+        description="Explore beauty parlour and salon services in Chamarajanagar at Aayra Makeovers. Precision haircuts, herbal facials, hair spa, gentle threading, waxing & nail care by Pallavi."
+        canonical="https://aayramakeovers.com/services"
+        structuredData={servicesStructuredData}
+        breadcrumbs={servicesBreadcrumbs}
+      />
+
       {/* Editorial Menu Header */}
       <section className={styles.pageHeader}>
         <motion.p className={styles.tag} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          ✦ Aayra Makeovers · Salon Menu
+          ✦ Aayra Makeovers · Beauty Parlour Chamarajanagar
         </motion.p>
         <motion.h1 className={styles.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-          Treatment Menu &amp; Services
+          Beauty Parlour &amp; Salon Services in Chamarajanagar
         </motion.h1>
         <motion.p className={styles.sub} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          Browse our complete salon booklet featuring haircutting, nourishing hair spas, skin facials, and wedding styling by Pallavi.
+          Browse our complete salon booklet featuring precision haircutting, nourishing hair spas, herbal skin facials, gentle waxing and party styling by Pallavi in Chamarajanagar.
         </motion.p>
       </section>
 
@@ -450,14 +546,14 @@ export function ServicesPage() {
 
 // ── TAILORING PAGE ──
 const blouseDesigns = [
-  { img: b1, id: 1 },
-  { img: b2, id: 2 },
-  { img: b3, id: 3 },
-  { img: b4, id: 4 },
-  { img: b5, id: 5 },
-  { img: b6, id: 6 },
-  { img: b7, id: 7 },
-  { img: b8, id: 8 },
+  { img: b1, id: 1, title: 'Handcrafted Bridal Aari Needlework Blouse in Chamarajanagar' },
+  { img: b2, id: 2, title: 'Princess Cut Designer Blouse Stitching in Chamarajanagar' },
+  { img: b3, id: 3, title: 'Intricate Maggam Stone & Zari Work Blouse by Pallavi' },
+  { img: b4, id: 4, title: 'Custom Deep U-Neck Silk Saree Blouse Tailoring in Chamarajanagar' },
+  { img: b5, id: 5, title: 'Designer Bridal Zardozi Embroidery Blouse Pattern' },
+  { img: b6, id: 6, title: 'Boat Neck Wedding Saree Blouse Stitching in Chamarajanagar' },
+  { img: b7, id: 7, title: 'Cutout Back Blouse with Handmade Dori Tassels' },
+  { img: b8, id: 8, title: 'Grand Bridal Heavy Maggam Embroidery Blouse Stitching in Chamarajanagar' },
 ]
 
 const boutiqueServicesHighlights = [
@@ -476,18 +572,68 @@ const blouseNeckPatterns = [
   { name: 'Keyhole & Window Cutouts', desc: 'Trendy modern cutout neck shapes for party blouses' },
 ]
 
+const tailoringStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  'name': 'Designer Blouse Stitching & Ladies Tailoring in Chamarajanagar',
+  'serviceType': 'Ladies Tailoring & Custom Blouse Stitching',
+  'provider': {
+    '@type': 'BeautySalon',
+    'name': 'Aayra Makeovers',
+    'telephone': '+91-9686457628',
+    'address': {
+      '@type': 'PostalAddress',
+      'addressLocality': 'Chamarajanagar',
+      'addressRegion': 'Karnataka',
+      'postalCode': '571440',
+      'addressCountry': 'IN',
+    },
+  },
+  'areaServed': {
+    '@type': 'City',
+    'name': 'Chamarajanagar',
+  },
+  'hasOfferCatalog': {
+    '@type': 'OfferCatalog',
+    'name': 'Custom Tailoring Services',
+    'itemListElement': [
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Designer Blouse Stitching (Princess Cut, Katori Cut, Boat Neck, Padded)' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Handcrafted Bridal Aari & Maggam Embroidery' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Custom Salwar Suits, Kurtis & Anarkali Stitching' } },
+      { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Saree Kuchu Tassels & Fall Pico' } },
+    ],
+  },
+}
+
+const tailoringBreadcrumbs = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.com/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Blouses & Tailoring', 'item': 'https://aayramakeovers.com/tailoring' },
+  ],
+}
+
 export function TailoringPage() {
   return (
     <div className={styles.pageWrap}>
+      <SEO
+        title="Designer Blouse Stitching & Ladies Tailoring in Chamarajanagar | Aayra Makeovers"
+        description="Custom blouse stitching & designer ladies tailoring in Chamarajanagar. Handcrafted bridal Aari maggam work, princess cut blouse fitting & dress stitching by Pallavi."
+        canonical="https://aayramakeovers.com/tailoring"
+        structuredData={tailoringStructuredData}
+        breadcrumbs={tailoringBreadcrumbs}
+      />
+
       <section className={styles.pageHeader}>
         <motion.p className={styles.tag} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          ✦ Designer Boutique &amp; Stitching
+          ✦ Designer Boutique &amp; Stitching in Chamarajanagar
         </motion.p>
         <motion.h1 className={styles.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-          Blouses &amp; Stitching
+          Designer Blouse Stitching &amp; Ladies Tailoring in Chamarajanagar
         </motion.h1>
         <motion.p className={styles.sub} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          Explore our exclusive collection of handcrafted blouse designs, bridal Aari embroidery, custom neck patterns &amp; bespoke boutique stitching by Pallavi.
+          Explore our exclusive collection of handcrafted blouse designs, bridal Aari embroidery, custom neck patterns &amp; bespoke boutique tailoring by Pallavi in Chamarajanagar.
         </motion.p>
       </section>
 
@@ -495,7 +641,7 @@ export function TailoringPage() {
         {/* Blouse Designs Gallery - Pure visual showcase without individual image text */}
         <div className={styles.boutiqueSectionHeader}>
           <div className={styles.boutiqueTag}>DESIGN CATALOG</div>
-          <h2 className={styles.boutiqueTitle}>Blouse &amp; Embroidery Designs</h2>
+          <h2 className={styles.boutiqueTitle}>Blouse &amp; Embroidery Designs in Chamarajanagar</h2>
           <p className={styles.patternsSub}>Browse through our latest handcrafted patterns and bridal blouse creations:</p>
         </div>
 
@@ -510,7 +656,7 @@ export function TailoringPage() {
               transition={{ duration: 0.45, delay: (i % 4) * 0.07 }}
             >
               <div className={styles.blouseImgFrame}>
-                <img src={item.img} alt={`Blouse Design ${item.id}`} loading="lazy" />
+                <img src={item.img} alt={item.title} loading="lazy" />
                 <div className={styles.blouseOverlay} />
               </div>
             </motion.div>
@@ -521,7 +667,7 @@ export function TailoringPage() {
         <div className={styles.patternsSection}>
           <div className={styles.boutiqueSectionHeader}>
             <div className={styles.boutiqueTag}>SERVICES &amp; SPECIALIZATIONS</div>
-            <h2 className={styles.boutiqueTitle}>Bespoke Boutique Services</h2>
+            <h2 className={styles.boutiqueTitle}>Bespoke Boutique Services in Chamarajanagar</h2>
           </div>
 
           <div className={styles.boutiqueFeaturesGrid}>
@@ -564,7 +710,7 @@ export function TailoringPage() {
         <div className={styles.ctaBanner}>
           <div className={styles.ctaText}>
             <h3>Have a Design in Mind?</h3>
-            <p>Share your Pinterest or Instagram reference image with Pallavi for custom tailoring, perfect measurements and bridal embroidery.</p>
+            <p>Share your Pinterest or Instagram reference image with Pallavi for custom tailoring, perfect measurements and bridal embroidery in Chamarajanagar.</p>
           </div>
           <a href={WA_TAILOR} target="_blank" rel="noreferrer" className={styles.ctaBtn}>
             <span>Send Design on WhatsApp</span>
@@ -581,21 +727,62 @@ export function TailoringPage() {
 
 // ── ABOUT PAGE (Dedicated Full About Experience with 3-Image Lookbook) ──
 const aboutGallery = [
-  { img: shop1, title: 'Private Beauty & Facial Suite', desc: 'Sanitized 1-on-1 space for skin treatments, facials and relaxation.' },
-  { img: shop2, title: 'Bespoke Tailoring & Stitching Station', desc: 'Master cutting tables, blouse trial mirrors & Aari frame craft.' },
-  { img: shop3, title: 'Hair Styling & Bridal Dressing Area', desc: 'Spacious hair wash, blowdry styling and wedding saree draping area.' },
+  { img: shop1, title: 'Private Beauty & Facial Suite in Chamarajanagar', desc: 'Sanitized 1-on-1 space for skin treatments, facials and relaxation.' },
+  { img: shop2, title: 'Bespoke Tailoring & Blouse Cutting Station', desc: 'Master cutting tables, blouse trial mirrors & Aari frame craft in Chamarajanagar.' },
+  { img: shop3, title: 'Hair Styling & Bridal Dressing Lounge', desc: 'Spacious hair wash, blowdry styling and wedding saree draping area.' },
 ]
+
+const aboutStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  'name': 'About Aayra Makeovers & Stylist Pallavi in Chamarajanagar',
+  'description': 'Founded and personally curated by Pallavi, creating an exclusive private sanctuary for beauty rituals, bridal artistry, and bespoke tailoring in Chamarajanagar.',
+  'mainEntity': {
+    '@type': 'Person',
+    'name': 'Pallavi',
+    'jobTitle': 'Master Makeup Artist & Tailor',
+    'worksFor': {
+      '@type': 'BeautySalon',
+      'name': 'Aayra Makeovers',
+      'telephone': '+91-9686457628',
+      'address': {
+        '@type': 'PostalAddress',
+        'addressLocality': 'Chamarajanagar',
+        'addressRegion': 'Karnataka',
+        'postalCode': '571440',
+        'addressCountry': 'IN',
+      },
+    },
+  },
+}
+
+const aboutBreadcrumbs = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.com/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'About Pallavi & Studio', 'item': 'https://aayramakeovers.com/about' },
+  ],
+}
 
 export function AboutPage() {
   return (
     <div className={styles.pageWrap}>
+      <SEO
+        title="About Aayra Makeovers | Master Stylist & Tailor Pallavi | Chamarajanagar"
+        description="Learn about Aayra Makeovers in Chamarajanagar, founded by stylist & tailor Pallavi. A private 1-on-1 beauty parlour and bespoke tailoring boutique for women & kids."
+        canonical="https://aayramakeovers.com/about"
+        structuredData={aboutStructuredData}
+        breadcrumbs={aboutBreadcrumbs}
+      />
+
       {/* Page Header */}
       <section className={styles.pageHeader}>
         <motion.p className={styles.tag} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
           ✦ Founder &amp; Master Stylist
         </motion.p>
         <motion.h1 className={styles.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-          About Aayra Makeovers
+          About Aayra Makeovers &amp; Stylist Pallavi in Chamarajanagar
         </motion.h1>
         <motion.p className={styles.sub} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
           Founded and personally curated by Pallavi, creating an exclusive private sanctuary for beauty rituals, bridal artistry, and bespoke tailoring in Chamarajanagar.
@@ -658,7 +845,7 @@ export function AboutPage() {
               <div className={styles.pillarIcon}>❖</div>
               <div>
                 <h4 className={styles.pillarTitle}>Exclusive Female Sanctuary</h4>
-                <p className={styles.pillarDesc}>A safe, comfortable, and hygienic space reserved exclusively for women &amp; kids.</p>
+                <p className={styles.pillarDesc}>A safe, comfortable, and hygienic space reserved exclusively for women &amp; kids in Chamarajanagar.</p>
               </div>
             </div>
 
@@ -699,7 +886,7 @@ export function AboutPage() {
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
               >
                 <div className={styles.lookbookImgWrap}>
-                  <img src={item.img} alt={item.title} />
+                  <img src={item.img} alt={item.title} loading="lazy" />
                 </div>
                 <div className={styles.lookbookInfo}>
                   <span className={styles.lookbookNum}>0{idx + 1}</span>
@@ -715,7 +902,7 @@ export function AboutPage() {
         <div className={styles.ctaBanner}>
           <div className={styles.ctaText}>
             <h3>Ready to Experience Aayra Makeovers?</h3>
-            <p>Schedule your personalized beauty ritual, haircut, or tailoring consultation with Pallavi today.</p>
+            <p>Schedule your personalized beauty ritual, haircut, or tailoring consultation with Pallavi in Chamarajanagar today.</p>
           </div>
           <a href={WA_MAIN} target="_blank" rel="noreferrer" className={styles.ctaBtn}>
             <span>Book With Pallavi</span>
@@ -731,21 +918,73 @@ export function AboutPage() {
 }
 
 // ── CONTACT PAGE ──
+const contactStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  'name': 'Contact Aayra Makeovers in Chamarajanagar',
+  'description': 'Visit or contact Aayra Makeovers in Chamarajanagar, Karnataka for beauty parlour appointments, bridal bookings, and blouse tailoring.',
+  'mainEntity': {
+    '@type': 'BeautySalon',
+    'name': 'Aayra Makeovers',
+    'telephone': '+91-9686457628',
+    'email': 'aayramakeovers@gmail.com',
+    'address': {
+      '@type': 'PostalAddress',
+      'streetAddress': 'Near Chamarajanagar Town',
+      'addressLocality': 'Chamarajanagar',
+      'addressRegion': 'Karnataka',
+      'postalCode': '571440',
+      'addressCountry': 'IN',
+    },
+    'geo': {
+      '@type': 'GeoCoordinates',
+      'latitude': 11.9258437,
+      'longitude': 76.9380792,
+    },
+    'openingHoursSpecification': [
+      {
+        '@type': 'OpeningHoursSpecification',
+        'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+        'opens': '10:00',
+        'closes': '19:00',
+      },
+    ],
+  },
+}
+
+const contactBreadcrumbs = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  'itemListElement': [
+    { '@type': 'ListItem', 'position': 1, 'name': 'Home', 'item': 'https://aayramakeovers.com/' },
+    { '@type': 'ListItem', 'position': 2, 'name': 'Contact & Location', 'item': 'https://aayramakeovers.com/contact' },
+  ],
+}
+
 export function ContactPage() {
   return (
     <div className={styles.pageWrap}>
+      <SEO
+        title="Contact Aayra Makeovers | Beauty Parlour & Studio in Chamarajanagar"
+        description="Visit or contact Aayra Makeovers in Chamarajanagar, Karnataka. Open daily 10 AM - 7 PM for beauty parlour appointments, bridal bookings & tailoring consultations."
+        canonical="https://aayramakeovers.com/contact"
+        structuredData={contactStructuredData}
+        breadcrumbs={contactBreadcrumbs}
+      />
+
       <section className={styles.pageHeader}>
         <motion.p className={styles.tag} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
-          ✦ Get In Touch
+          ✦ Get In Touch · Chamarajanagar
         </motion.p>
         <motion.h1 className={styles.title} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}>
-          Contact &amp; Location
+          Visit &amp; Contact Aayra Makeovers in Chamarajanagar
         </motion.h1>
         <motion.p className={styles.sub} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-          Visit our studio in Chamarajanagar, call or message on WhatsApp to schedule your appointment.
+          Visit our studio in Chamarajanagar, call or message on WhatsApp to schedule your beauty parlour session, bridal trial, or blouse tailoring appointment.
         </motion.p>
       </section>
       <MapSection />
     </div>
   )
 }
+

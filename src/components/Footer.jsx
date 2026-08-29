@@ -5,19 +5,20 @@ import styles from './Footer.module.css'
 const WA = 'https://wa.me/919686457628?text=Hello%20Pallavi%2C%20I%20would%20like%20to%20book%20an%20appointment.'
 
 const BEAUTY_SERVICES = [
-  { href: '/services', label: 'Nourishing Hair Spa' },
-  { href: '/services', label: 'Radiant Skin Facials' },
-  { href: '/services', label: 'Eyebrows & Threading' },
-  { href: '/services', label: 'Trending Haircuts' },
-  { href: '/services', label: 'Manicure & Pedicure' },
+  { href: '/services', label: 'Hair Spa & Scalp Massage' },
+  { href: '/services', label: 'Skin Glow Facials & D-Tan' },
+  { href: '/services', label: 'Eyebrow Threading & Waxing' },
+  { href: '/services', label: 'Layer & Feather Haircuts' },
+  { href: '/services', label: 'Spa Manicure & Pedicure' },
 ]
 
 const BRIDAL_TAILORING = [
-  { href: '/bridal', label: 'HD Bridal Makeovers' },
-  { href: '/bridal', label: 'Engagement & Haldi Glam' },
+  { href: '/bridal', label: 'HD Bridal Makeup Artistry' },
+  { href: '/bridal', label: 'Muhurtham & Reception Packages' },
   { href: '/tailoring', label: 'Designer Blouse Stitching' },
-  { href: '/tailoring', label: 'Bridal Aari Embroidery' },
-  { href: '/tailoring', label: 'Saree Kuchu & Draping' },
+  { href: '/tailoring', label: 'Bridal Aari & Maggam Work' },
+  { href: '/about', label: 'About Stylist Pallavi' },
+  { href: '/contact', label: 'Contact & Studio Map' },
 ]
 
 export default function Footer() {

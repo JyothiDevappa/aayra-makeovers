@@ -1,0 +1,16 @@
+{
+  "name": "Aayra Makeovers",
+  "short_name": "Aayra Makeovers",
+  "description": "Premier Beauty Parlour, Bridal Makeup & Tailoring Studio in Chamarajanagar by Pallavi",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF8F5",
+  "theme_color": "#C9A96A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

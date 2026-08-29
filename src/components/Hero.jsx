@@ -10,9 +10,9 @@ import hero2 from '../assets/img/hero_images/hero-slider-2.webp'
 import hero3 from '../assets/img/hero_images/hero-slider-3.webp'
 
 const slides = [
-  { img: hero1, alt: 'Aayra Makeovers Bridal Styling' },
-  { img: hero2, alt: 'Aayra Makeovers Hair Spa & Facials' },
-  { img: hero3, alt: 'Aayra Makeovers Designer Aari Blouse' },
+  { img: hero1, alt: 'Aayra Makeovers - Bridal Makeup Artist & Wedding Styling in Chamarajanagar' },
+  { img: hero2, alt: 'Nourishing Hair Spa, Skin Glow Facials & Parlour Services in Chamarajanagar' },
+  { img: hero3, alt: 'Designer Blouse Stitching & Bridal Aari Needlework in Chamarajanagar' },
 ]
 
 export default function Hero() {
@@ -24,8 +24,6 @@ export default function Hero() {
       {/* Background parlour image with luxury overlay */}
       <div className={styles.bgOverlay} />
 
-
-
       <div className={styles.container}>
         {/* Left — Text (Spacing & structure preserved exactly) */}
         <div className={styles.left}>
@@ -36,7 +34,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.15 }}
           >
             <span className={styles.eyebrowLine} />
-            Open Daily · 10:00 AM – 7:00 PM
+            Chamarajanagar · Open Daily 10:00 AM – 7:00 PM
           </motion.div>
 
           <motion.h1
@@ -45,10 +43,11 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Welcome to our <br className={styles.desktopBr} />
+            Premier <br className={styles.desktopBr} />
             <span className={styles.titleGold}>Beauty Parlour &amp;</span> <br className={styles.desktopBr} />
             <span className={styles.italic}>Tailoring Studio.</span>
           </motion.h1>
+
 
           <motion.div
             className={styles.actions}
