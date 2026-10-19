@@ -8,11 +8,20 @@ import styles from './Hero.module.css'
 import hero1 from '../assets/img/hero_images/hero-slider-1.webp'
 import hero2 from '../assets/img/hero_images/hero-slider-2.webp'
 import hero3 from '../assets/img/hero_images/hero-slider-3.webp'
+import hero4 from '../assets/img/hero_images/crystal-facial.jpg'
 
 const slides = [
   { img: hero1, alt: 'Aayra Makeovers - Bridal Makeup Artist & Wedding Styling in Chamarajanagar' },
   { img: hero2, alt: 'Nourishing Hair Spa, Skin Glow Facials & Parlour Services in Chamarajanagar' },
   { img: hero3, alt: 'Designer Blouse Stitching & Bridal Aari Needlework in Chamarajanagar' },
+  {
+    img: hero4,
+    alt: 'Crystal Facial at Aayra Makeovers, Chamarajanagar - Holistic Treatment with Facial Gemstones',
+    badge: 'Newly Launched',
+    title: 'Introducing Crystal Facial',
+    ctaText: 'Enquire Now',
+    ctaLink: 'https://wa.me/919686457628?text=Hello%20Pallavi%2C%20I%20would%20like%20to%20enquire%20about%20the%20Newly%20Launched%20Crystal%20Facial%20at%20Aayra%20Makeovers.',
+  },
 ]
 
 export default function Hero() {
@@ -103,6 +112,27 @@ export default function Hero() {
                     loading={index === 0 ? 'eager' : 'lazy'}
                   />
                   <div className={styles.slideGradient} />
+                  {slide.title && (
+                    <div className={styles.slideOverlay}>
+                      <div className={styles.slideOverlayContent}>
+                        <span className={styles.slideBadge}>{slide.badge}</span>
+                        <p className={styles.slideTitle}>{slide.title}</p>
+                      </div>
+                      <a
+                        id="hero-slide-4-cta"
+                        href={slide.ctaLink}
+                        target="_blank"
+                        rel="noreferrer"
+                        className={styles.slideCta}
+                      >
+                        <span>{slide.ctaText}</span>
+                        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                          <path d="M5 12h14" />
+                          <path d="m12 5 7 7-7 7" />
+                        </svg>
+                      </a>
+                    </div>
+                  )}
                 </SwiperSlide>
               ))}
             </Swiper>
@@ -112,6 +142,7 @@ export default function Hero() {
               {slides.map((_, i) => (
                 <button
                   key={i}
+                  id={`hero-dot-${i}`}
                   className={`${styles.dot} ${i === activeIndex ? styles.dotActive : ''}`}
                   onClick={() => swiperRef.current?.slideToLoop(i)}
                   aria-label={`Slide ${i + 1}`}

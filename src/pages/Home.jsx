@@ -1,5 +1,6 @@
 import SEO from '../components/SEO'
 import Hero from '../components/Hero'
+import CrystalFacialSection from '../components/CrystalFacialSection'
 import ServicesCarousel from '../components/ServicesCarousel'
 import AboutStrip from '../components/AboutStrip'
 import BridalGallery from '../components/BridalGallery'
@@ -105,6 +106,15 @@ const homeStructuredData = {
             '@type': 'Offer',
             'itemOffered': {
               '@type': 'Service',
+              'name': 'Newly Launched Crystal Facial in Chamarajanagar',
+              'description':
+                'Therapeutic facial gemstone ritual for stress management, anxiety relief, mood calm, clarifying troubled skin issues, and scalp relaxation by Pallavi.',
+            },
+          },
+          {
+            '@type': 'Offer',
+            'itemOffered': {
+              '@type': 'Service',
               'name': 'Women & Kids Precision Haircuts',
               'description':
                 'Layer cut, V-shape cut, U-cut, feather styling, and chic bob haircuts.',
@@ -137,6 +147,7 @@ export default function Home() {
         structuredData={homeStructuredData}
       />
       <Hero />
+      <CrystalFacialSection />
       <ServicesCarousel />
       <AboutStrip />
       <BridalGallery />
